@@ -1,9 +1,7 @@
 <template>
   <div id="main">
     <TopNav></TopNav>
-    <el-container>
         <router-view></router-view>
-    </el-container>
   </div>
 </template>
 
@@ -31,7 +29,7 @@ export default {
 <style scoped>
   #main {
     width: 100%;
-    height: 100%;
+    height: auto;
     background-image: url("../assets/img/indexBg.webp");
     background-size: cover;
     background-attachment: fixed;

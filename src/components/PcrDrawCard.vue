@@ -1,78 +1,90 @@
 <template>
-  <div class="dcbox">
-    <div class="msgdc">
-      <div class="PDCmainbox">
-        <div class="cards">
-          <transition name="el-fade-in">
-            <div v-show="show" class="transition-box">
-              <el-image fit="cover" :src="urls"></el-image>
-            </div>
-          </transition>
-          <transition name="el-fade-in">
-            <div v-show="show" class="transition-box">
-              <el-image fit="cover" :src="urls"></el-image>
-            </div>
-          </transition>
-          <transition name="el-fade-in">
-            <div v-show="show" class="transition-box">
-              <el-image fit="cover" :src="urls"></el-image>
-            </div>
-          </transition>
-          <transition name="el-fade-in">
-            <div v-show="show" class="transition-box">
-              <el-image fit="cover" :src="urls"></el-image>
-            </div>
-          </transition>
-          <transition name="el-fade-in">
-            <div v-show="show" class="transition-box">
-              <el-image fit="cover" :src="urls"></el-image>
-            </div>
-          </transition>
-          <transition name="el-fade-in">
-            <div v-show="show" class="transition-box">
-              <el-image fit="cover" :src="urls"></el-image>
-            </div>
-          </transition>
-          <transition name="el-fade-in">
-            <div v-show="show" class="transition-box">
-              <el-image fit="cover" :src="urls"></el-image>
-            </div>
-          </transition>
-          <transition name="el-fade-in">
-            <div v-show="show" class="transition-box">
-              <el-image fit="cover" :src="urls"></el-image>
-            </div>
-          </transition>
-          <transition name="el-fade-in">
-            <div v-show="show" class="transition-box">
-              <el-image fit="cover" :src="urls"></el-image>
-            </div>
-          </transition>
-          <transition name="el-fade-in">
-            <div v-show="show" class="transition-box">
-              <el-image fit="cover" :src="urls"></el-image>
-            </div>
-          </transition>
+  <div>
+    <div class="dcbox">
+      <div class="msgdc">
+        <div class="PDCmainbox">
+          <!--核心抽卡页面-->
+          <div class="cards">
+            <transition name="el-fade-in">
+              <div v-show="show" class="transition-box">
+                <el-image fit="cover" :src="urls"></el-image>
+              </div>
+            </transition>
+            <transition name="el-fade-in">
+              <div v-show="show" class="transition-box">
+                <el-image fit="cover" :src="urls"></el-image>
+              </div>
+            </transition>
+            <transition name="el-fade-in">
+              <div v-show="show" class="transition-box">
+                <el-image fit="cover" :src="urls"></el-image>
+              </div>
+            </transition>
+            <transition name="el-fade-in">
+              <div v-show="show" class="transition-box">
+                <el-image fit="cover" :src="urls"></el-image>
+              </div>
+            </transition>
+            <transition name="el-fade-in">
+              <div v-show="show" class="transition-box">
+                <el-image fit="cover" :src="urls"></el-image>
+              </div>
+            </transition>
+            <transition name="el-fade-in">
+              <div v-show="show" class="transition-box">
+                <el-image fit="cover" :src="urls"></el-image>
+              </div>
+            </transition>
+            <transition name="el-fade-in">
+              <div v-show="show" class="transition-box">
+                <el-image fit="cover" :src="urls"></el-image>
+              </div>
+            </transition>
+            <transition name="el-fade-in">
+              <div v-show="show" class="transition-box">
+                <el-image fit="cover" :src="urls"></el-image>
+              </div>
+            </transition>
+            <transition name="el-fade-in">
+              <div v-show="show" class="transition-box">
+                <el-image fit="cover" :src="urls"></el-image>
+              </div>
+            </transition>
+            <transition name="el-fade-in">
+              <div v-show="show" class="transition-box">
+                <el-image fit="cover" :src="urls"></el-image>
+              </div>
+            </transition>
+          </div>
         </div>
-      </div>
-      <div class="msgbutton">
-        <div class="msgbox">
-          次数：{{frequency}}
-          宝石：{{gem}}
-          消费：{{rmb}}RMB
-        </div>
-        <div class="buttombox">
-          <el-button type="primary" @click="show = false,onClean()">重置</el-button>
-          <el-button type="danger" @click="show = true,onTenTimes()">十连模拟</el-button>
+        <div class="msgbutton">
+          <div class="buttombox">
+            <el-button type="primary" @click="show = false,onClean()">重置</el-button>
+            <el-button type="danger" @click="show = true,onTenTimes()">十连模拟</el-button>
+          </div>
         </div>
       </div>
     </div>
+    <el-card>
+      <div class="msgbox">
+        次数：{{frequency}}
+        宝石：{{gem}}
+        消费：{{rmb}}RMB
+      </div>
+    </el-card>
+    <!--页脚-->
+    <footermain></footermain>
   </div>
 </template>
 
 <script>
+// 导入页脚组件
+import footermain from '../components/footer'
+
 export default {
   name: 'PcrDrawCard',
+  components: { footermain },
+  // vue生命周期函数
   created () {
     this.$alert('正在开发的页面', '警告！！！', {
       confirmButtonText: '确定'
@@ -108,7 +120,7 @@ export default {
   .dcbox {
     width: 980px;
     height: 540px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding-top: 20px;
     background-color: rgba(255, 255, 255, 0.6);
     border: #ffa500 solid;
@@ -138,7 +150,7 @@ export default {
     width: 890px;
     padding-top: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
   .cards {
@@ -164,5 +176,12 @@ export default {
     text-align: center;
     color: #fff;
     box-sizing: border-box;
+  }
+
+  .el-card{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 980px;
+    height: 300px;
   }
 </style>

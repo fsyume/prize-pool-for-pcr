@@ -1,11 +1,14 @@
 <template>
-  <div class="mainbox">
+  <!--主页信息-->
+  <div>
+    <div class="mainbox">
     <Carousel></Carousel>
     <div class="cardBox">
       <el-card class="card1"></el-card>
       <el-card class="card2"></el-card>
     </div>
     <el-card class="card3"></el-card>
+    </div>
     <footermain></footermain>
   </div>
 </template>
