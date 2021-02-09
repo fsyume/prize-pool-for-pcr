@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="aboutmain">
-      <el-card></el-card>
+      <el-card><h1>关于此站点</h1></el-card>
       <el-card></el-card>
       <el-card></el-card>
     </div>
@@ -30,6 +30,7 @@ export default {
     margin-top: 20px;
     width: 1000px;
     height: 300px;
+    color: #34495e;
   }
 
   .footermain{

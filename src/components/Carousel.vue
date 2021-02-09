@@ -2,8 +2,8 @@
 <!--  走马灯-->
     <div>
       <el-carousel indicator-position="outside">
-        <el-carousel-item v-for="item in 4" :key="item">
-          <h3>{{ item }}</h3>
+        <el-carousel-item v-for="item in imgbox" :key="item.id">
+          <img :src="item.idView">
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -11,7 +11,15 @@
 
 <script>
 export default {
-  name: 'Carousel'
+  name: 'Carousel',
+  data () {
+    return {
+      imgbox: [
+        { id: 0, idView: 'https://patchwiki.biligame.com/images/pcr/thumb/0/05/8wcq7kp5wsygx1tzwrqasuylm9d772j.jpg/350px-%E7%BB%B4%E6%8A%A4.jpg' },
+        { id: 1, idView: 'https://gitee.com/kzycn/picCloud/raw/master/2021/20210125161233.jpg' }
+      ]
+    }
+  }
 }
 </script>
 
