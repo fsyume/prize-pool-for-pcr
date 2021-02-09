@@ -17,6 +17,7 @@ export default {
   created: function () {
     console.log('弹窗弹出')
     this.$notify({
+      position: 'top-left',
       title: '欢迎',
       message: '这里是公主连结奖池模拟，目前处于开发阶段'
       // 为0则不能自动关闭弹窗
