@@ -95,17 +95,20 @@ export default {
       frequency: 0,
       gem: 0,
       rmb: 0,
-      urls: [
-        'https://patchwiki.biligame.com/images/pcr/4/48/iuhnggoyj05sicnw1oj7y96cfytgw9e.png'
-      ],
+      urls: '',
       show: false
     }
   },
   methods: {
-    onTenTimes () {
+    // 异步
+    async onTenTimes () {
       this.frequency++
       this.gem = this.gem + 1500
       this.rmb = this.rmb + 155
+      // 简化Promise对象
+      var { data: res } = await this.$http.get('/data/pcr.json')
+      this.urls = res.data[0].url
+      console.log(res.data[0].url)
     },
     onClean () {
       this.frequency = 0

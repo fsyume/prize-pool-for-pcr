@@ -8,6 +8,7 @@ import './assets/css/style.css'
 Vue.config.productionTip = false
 
 Vue.use(VueAxios)
+Vue.prototype.$http = VueAxios
 
 // 自定义标签标题
 router.beforeEach((to, from, next) => {

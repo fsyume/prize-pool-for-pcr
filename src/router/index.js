@@ -4,7 +4,7 @@ import pcr from '../views/pcr'
 import arknights from '../views/arknights'
 import about from '../views/about'
 import PcrDrawCard from '../components/PcrDrawCard'
-import pcrrole from '../components/pcrrole'
+// import pcrrole from '../components/pcrrole'
 import index from '../views/index'
 import notfound from '../views/NotFound'
 
@@ -17,7 +17,7 @@ const routes = [
     meta: { title: '公主连结蛋池模拟' },
     children: [
       { path: '/', component: index, meta: { title: '公主连结蛋池模拟' } },
-      { path: 'pcrrole', component: pcrrole, meta: { title: '公主连结蛋池模拟' } },
+      // { path: 'pcrrole', component: pcrrole, meta: { title: '公主连结角色列表' } },
       { path: 'pcrdrawcard', component: PcrDrawCard, meta: { title: '公主连结蛋池模拟' } },
       { path: 'about', component: about, meta: { title: '公主连结蛋池模拟' } }
     ]

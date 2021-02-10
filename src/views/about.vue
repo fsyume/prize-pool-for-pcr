@@ -24,6 +24,13 @@
       <el-card>
         <h2>相关链接</h2>
         <el-divider></el-divider>
+        <el-link type="danger" href="https://space.bilibili.com/353840826?from=search&seid=14120226757587209833">公主连结简中版官方账户</el-link>
+        <el-divider direction="vertical"></el-divider>
+        <el-link type="danger" href="https://game.bilibili.com/pcr/">简中版官网</el-link>
+        <el-divider></el-divider>
+        <el-link type="danger" href="https://www.cygames.co.jp/">株式会社Cygames</el-link>
+        <el-divider></el-divider>
+        <el-link type="danger" href="https://gitee.com/kzycn/PcrArk-draw-card">🏆本站点码云地址</el-link>
       </el-card>
       <el-card>
         <h2>建议反馈渠道</h2>
