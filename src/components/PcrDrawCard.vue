@@ -107,8 +107,8 @@ export default {
       this.rmb = this.rmb + 155
       // 简化Promise对象
       var { data: res } = await this.$http.get('/data/pcr.json')
-      this.urls = res.data[0].url
-      console.log(res.data[0].url)
+      this.urls = res.threestar[0].url
+      console.log(res.threestar[0].url)
     },
     onClean () {
       this.frequency = 0

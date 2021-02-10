@@ -3,7 +3,7 @@
     <div>
       <el-carousel indicator-position="outside">
         <el-carousel-item v-for="item in imgbox" :key="item.id">
-          <img :src="item.idView">
+          <img :src="item.url" class="img">
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -12,18 +12,27 @@
 <script>
 export default {
   name: 'Carousel',
+  // vue生命周期函数
+  async created () {
+    // 简化Promise对象
+    var { data: res } = await this.$http.get('/data/CarouselImgbox.json')
+    this.imgbox = res.imgbox
+    console.log(res.imgbox[0].url)
+  },
   data () {
     return {
-      imgbox: [
-        { id: 0, idView: 'https://patchwiki.biligame.com/images/pcr/thumb/0/05/8wcq7kp5wsygx1tzwrqasuylm9d772j.jpg/350px-%E7%BB%B4%E6%8A%A4.jpg' },
-        { id: 1, idView: 'https://gitee.com/kzycn/picCloud/raw/master/2021/20210125161233.jpg' }
-      ]
+      imgbox: []
     }
   }
 }
 </script>
 
 <style scoped>
+  .img{
+    width: 100%;
+    height: 100%;
+  }
+
   .el-carousel{
     width: 1000px;
   }
