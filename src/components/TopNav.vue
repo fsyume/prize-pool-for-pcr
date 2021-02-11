@@ -10,12 +10,12 @@
           <el-submenu index="pcr">
             <template slot="title">公主连结Re:Dive</template>
             <el-menu-item class="item1" index="pcrdrawcard">蛋池模拟</el-menu-item>
-            <el-menu-item class="item1" index="pcrrole">角色列表</el-menu-item>
+            <el-menu-item class="item1" index="pcrrole" disabled>角色列表</el-menu-item>
           </el-submenu>
           <el-submenu index="ark">
             <template slot="title">明日方舟Arknights</template>
-            <el-menu-item class="item1" index="arknights">蛋池模拟</el-menu-item>
-            <el-menu-item index="arkrole">角色列表</el-menu-item>
+            <el-menu-item class="item1" index="arknights" disabled>蛋池模拟</el-menu-item>
+            <el-menu-item index="arkrole" disabled>角色列表</el-menu-item>
           </el-submenu>
           <el-menu-item index="about">关于</el-menu-item>
           <el-menu-item><a href="https://www.husei.cn">作者博客</a></el-menu-item>

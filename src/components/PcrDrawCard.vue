@@ -80,6 +80,7 @@
 <script>
 // 导入页脚组件
 import footermain from '../components/footer'
+// import { CharacterArray } from '../../public/lottery'
 
 export default {
   name: 'PcrDrawCard',
@@ -110,6 +111,9 @@ export default {
       this.urls = res.threestar[0].url
       console.log(res.threestar[0].url)
     },
+    // onTenTimes () {
+    //   console.log(CharacterArray())
+    // },
     onClean () {
       this.frequency = 0
       this.gem = 0
