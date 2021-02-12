@@ -80,7 +80,7 @@
 <script>
 // 导入页脚组件
 import footermain from '../components/footer'
-import { CharacterArray, Start } from '../../public/core/lottery'
+import { Recruit } from '../../public/core/lottery'
 
 export default {
   name: 'PcrDrawCard',
@@ -109,8 +109,10 @@ export default {
       // 简化Promise对象
       // var { data: res } = await this.$http.get('/data/pcr.json')
       // this.urls = res.threestar[0].url
-      CharacterArray()
-      Start()
+      for (var i = 1; i <= 9; i++) {
+        Recruit.Start()
+      }
+      Recruit.LastStart()
     },
     onClean () {
       this.frequency = 0
