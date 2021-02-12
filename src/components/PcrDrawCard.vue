@@ -80,7 +80,7 @@
 <script>
 // 导入页脚组件
 import footermain from '../components/footer'
-import { CharacterArray, Start } from '../../public/lottery'
+import { CharacterArray, Start } from '../../public/core/lottery'
 
 export default {
   name: 'PcrDrawCard',
