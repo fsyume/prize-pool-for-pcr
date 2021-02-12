@@ -72,7 +72,7 @@
 
 <script>
 // 导入页脚组件
-import footermain from '../components/footer'
+import footermain from '../components/footermain'
 
 export default {
   name: 'about',

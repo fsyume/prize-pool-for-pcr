@@ -5,7 +5,7 @@
       </div>
       <div class="nav2">
         <!--设置router为true，将以index为path进行路由跳转-->
-        <el-menu mode="horizontal" unique-opened="true" background-color="#ffffff" active-text-color="#ffa500" router="true">
+        <el-menu mode="horizontal" :unique-opened="true" background-color="#ffffff" active-text-color="#ffa500" :router="true">
           <el-menu-item index="/">首页</el-menu-item>
           <el-submenu index="pcr">
             <template slot="title">公主连结Re:Dive</template>

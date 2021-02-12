@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import footermain from '../components/footer'
+import footermain from '../components/footermain'
 import Carousel from '../components/Carousel'
 
 export default {
