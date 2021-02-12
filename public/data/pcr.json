@@ -6,10 +6,10 @@
   "twostar":[
     {"name":"玲奈","code":"20","url":"https://patchwiki.biligame.com/images/pcr/e/e5/6d00c5yutzbikc8vnta72rjzppu5wvj.png"},
     {"name":"栞","code":"21","url":"https://patchwiki.biligame.com/images/pcr/0/05/exnyc4y1iuhrbjg3gxe7fncrj2mevmh.png"},
-    {"name":"美里","code":"22","url":"https://patchwiki.biligame.com/images/pcr/5/57/axnssn93k9c0g0a2prq0w42x9b3vsb8.png"},
-    {"name":"","code":"23","url":""},
-    {"name":"","code":"24","url":""},
-    {"name":"","code":"25","url":""},
-    {"name":"","code":"26","url":""}
+    {"name":"美里","code":"22","url":"https://patchwiki.biligame.com/images/pcr/5/57/axnssn93k9c0g0a2prq0w42x9b3vsb8.png"}
+  ],
+  "onestar":[
+    {"name":"玲奈","code":"20","url":"https://patchwiki.biligame.com/images/pcr/e/e5/6d00c5yutzbikc8vnta72rjzppu5wvj.png"},
+    {"name":"栞","code":"21","url":"https://patchwiki.biligame.com/images/pcr/0/05/exnyc4y1iuhrbjg3gxe7fncrj2mevmh.png"}
   ]
 }

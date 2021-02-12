@@ -97,7 +97,16 @@ export default {
       gem: 0,
       rmb: 0,
       urls: {
-        img1: ''
+        img1: '',
+        img2: '',
+        img3: '',
+        img4: '',
+        img5: '',
+        img6: '',
+        img7: '',
+        img8: '',
+        img9: '',
+        img10: ''
       },
       show: false
     }
@@ -107,14 +116,18 @@ export default {
       this.frequency++
       this.gem = this.gem + 1500
       this.rmb = this.rmb + 155
+      //
       for (var i = 1; i <= 9; i++) {
-        Recruit.Start()
+        var x = Recruit.Start()
+        var a = require('../../public/data/pcr.json')
+        this.urls.img1 = a.threestar[x].url
       }
       Recruit.LastStart()
       // 下方两行为测试代码
-      var a = require('../../public/data/pcr.json')
-      this.urls.img1 = a.threestar[0].url
+      // var a = require('../../public/data/pcr.json')
+      // this.urls.img1 = a.threestar[0].url
     },
+    // 重置按钮
     onClean () {
       this.frequency = 0
       this.gem = 0
