@@ -7,52 +7,52 @@
           <div class="cards">
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls"></el-image>
+                <el-image fit="cover" :src="urls.img1"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls"></el-image>
+                <el-image fit="cover" :src="urls.img1"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls"></el-image>
+                <el-image fit="cover" :src="urls.img1"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls"></el-image>
+                <el-image fit="cover" :src="urls.img1"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls"></el-image>
+                <el-image fit="cover" :src="urls.img1"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls"></el-image>
+                <el-image fit="cover" :src="urls.img1"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls"></el-image>
+                <el-image fit="cover" :src="urls.img1"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls"></el-image>
+                <el-image fit="cover" :src="urls.img1"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls"></el-image>
+                <el-image fit="cover" :src="urls.img1"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls"></el-image>
+                <el-image fit="cover" :src="urls.img1"></el-image>
               </div>
             </transition>
           </div>
@@ -96,23 +96,24 @@ export default {
       frequency: 0,
       gem: 0,
       rmb: 0,
-      urls: '',
+      urls: {
+        img1: ''
+      },
       show: false
     }
   },
   methods: {
-    // 异步
-    async onTenTimes () {
+    onTenTimes () {
       this.frequency++
       this.gem = this.gem + 1500
       this.rmb = this.rmb + 155
-      // 简化Promise对象
-      // var { data: res } = await this.$http.get('/data/pcr.json')
-      // this.urls = res.threestar[0].url
       for (var i = 1; i <= 9; i++) {
         Recruit.Start()
       }
       Recruit.LastStart()
+      // 下方两行为测试代码
+      var a = require('../../public/data/pcr.json')
+      this.urls.img1 = a.threestar[0].url
     },
     onClean () {
       this.frequency = 0

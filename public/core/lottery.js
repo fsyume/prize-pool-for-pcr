@@ -1,13 +1,11 @@
-import axios from '_axios@0.21.1@axios'
 // 获取角色数据
-async function CharacterArray () {
-  var a
-  await axios.get('/data/pcr.json').then(function (res) {
-    a = res.data
-  })
+function CharacterArray () {
+  // 读取角色json
+  var a = require('../../public/data/pcr.json')
   return a
 }
 
+// 随机数方法
 function randomNum () {
   // [0.100]的随机数
   var x = Math.random() * (100 + 1)
@@ -37,6 +35,7 @@ var Recruit = {
       console.log('2星')
     }
     console.log('第10次', x)
+    console.log(CharacterArray())
   }
 }
 

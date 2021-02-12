@@ -13,9 +13,9 @@
 export default {
   name: 'Carousel',
   // vue生命周期函数
-  async created () {
-    // 简化Promise对象
-    var { data: res } = await this.$http.get('/data/CarouselImgbox.json')
+  created () {
+    // 读取走马灯图片json
+    var res = require('../../public/data/CarouselImgbox.json')
     this.imgbox = res.imgbox
     console.log(res.imgbox[0].url)
   },
