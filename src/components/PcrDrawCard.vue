@@ -80,7 +80,7 @@
 <script>
 // 导入页脚组件
 import footermain from '../components/footer'
-// import { CharacterArray } from '../../public/lottery'
+import { CharacterArray, Start } from '../../public/lottery'
 
 export default {
   name: 'PcrDrawCard',
@@ -107,13 +107,11 @@ export default {
       this.gem = this.gem + 1500
       this.rmb = this.rmb + 155
       // 简化Promise对象
-      var { data: res } = await this.$http.get('/data/pcr.json')
-      this.urls = res.threestar[0].url
-      console.log(res.threestar[0].url)
+      // var { data: res } = await this.$http.get('/data/pcr.json')
+      // this.urls = res.threestar[0].url
+      CharacterArray()
+      Start()
     },
-    // onTenTimes () {
-    //   console.log(CharacterArray())
-    // },
     onClean () {
       this.frequency = 0
       this.gem = 0
