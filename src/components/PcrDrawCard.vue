@@ -12,47 +12,47 @@
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls.img1"></el-image>
+                <el-image fit="cover" :src="urls.img2"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls.img1"></el-image>
+                <el-image fit="cover" :src="urls.img3"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls.img1"></el-image>
+                <el-image fit="cover" :src="urls.img4"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls.img1"></el-image>
+                <el-image fit="cover" :src="urls.img5"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls.img1"></el-image>
+                <el-image fit="cover" :src="urls.img6"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls.img1"></el-image>
+                <el-image fit="cover" :src="urls.img7"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls.img1"></el-image>
+                <el-image fit="cover" :src="urls.img8"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls.img1"></el-image>
+                <el-image fit="cover" :src="urls.img9"></el-image>
               </div>
             </transition>
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
-                <el-image fit="cover" :src="urls.img1"></el-image>
+                <el-image fit="cover" :src="urls.img10"></el-image>
               </div>
             </transition>
           </div>
@@ -68,9 +68,12 @@
     <el-card>
       <div class="msgbox">
         次数：{{frequency}}
+        &nbsp;&nbsp;&nbsp;
         宝石：{{gem}}
+        &nbsp;&nbsp;&nbsp;
         消费：{{rmb}}RMB
       </div>
+      <el-divider></el-divider>
     </el-card>
     <!--页脚-->
     <footermain></footermain>
@@ -113,16 +116,20 @@ export default {
   },
   methods: {
     onTenTimes () {
-      this.frequency++
+      this.frequency = this.frequency + 10
       this.gem = this.gem + 1500
       this.rmb = this.rmb + 155
       //
-      for (var i = 1; i <= 9; i++) {
-        var x = Recruit.Start()
-        var a = require('../../public/data/pcr.json')
-        this.urls.img1 = a.threestar[x].url
-      }
-      Recruit.LastStart()
+      this.urls.img1 = Recruit.Start()
+      this.urls.img2 = Recruit.Start()
+      this.urls.img3 = Recruit.Start()
+      this.urls.img4 = Recruit.Start()
+      this.urls.img5 = Recruit.Start()
+      this.urls.img6 = Recruit.Start()
+      this.urls.img7 = Recruit.Start()
+      this.urls.img8 = Recruit.Start()
+      this.urls.img9 = Recruit.Start()
+      this.urls.img10 = Recruit.LastStart()
       // 下方两行为测试代码
       // var a = require('../../public/data/pcr.json')
       // this.urls.img1 = a.threestar[0].url
@@ -152,7 +159,7 @@ export default {
   }
 
   .msgbox {
-    width: 30%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
