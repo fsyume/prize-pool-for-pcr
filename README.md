@@ -1,4 +1,4 @@
-# draw-card（开发分支）
+# PcrArk-draw-card（开发分支）
 
 #### 介绍
 公主连结Re:Dive&明日方舟Arknights奖池页面
