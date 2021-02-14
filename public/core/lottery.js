@@ -17,22 +17,22 @@ var rand = {
   },
   // 三星角色图片数组随机挑选
   threeSelectImg: function () {
-    // [0.1]的随机整数
-    var x = Math.floor(Math.random() * (1 + 1))
+    // [0.32]的随机整数
+    var x = Math.floor(Math.random() * (32 + 1))
     var b = this.a.threestar[x].url
     return b
   },
   // 二星角色图片数组随机挑选
   twoSelectImg: function () {
-    // [0.1]的随机整数
-    var x = Math.floor(Math.random() * (1 + 1))
+    // [0.20]的随机整数
+    var x = Math.floor(Math.random() * (20 + 1))
     var b = this.a.twostar[x].url
     return b
   },
   // 一星角色图片数组随机挑选
   oneSelectImg: function () {
-    // [0.1]的随机整数
-    var x = Math.floor(Math.random() * (1 + 1))
+    // [0.18]的随机整数
+    var x = Math.floor(Math.random() * (18 + 1))
     var b = this.a.onestar[x].url
     return b
   }
