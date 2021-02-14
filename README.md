@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 # PcrArk-draw-card（开发分支）
-=======
-# PcrArk-draw-card（v1.0版本）
->>>>>>> remotes/origin/v1.0
 
 #### 介绍
 公主连结Re:Dive&明日方舟Arknights奖池页面
