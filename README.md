@@ -14,6 +14,7 @@ vue.js,vue-cil3.0,elementUI
 - 完善pcr抽奖逻辑
 - 增加概率切换按钮
 - 出货记录功能
+- 明日方舟Arknights页面
 - 活动日历（可能）
 
 #### 未来大版本预想
