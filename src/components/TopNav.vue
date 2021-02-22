@@ -1,4 +1,5 @@
 <template>
+<!-- 顶部导航 -->
     <div class="main">
       <div class="nav1">
         <h2>公主连结蛋池模拟</h2>
@@ -18,7 +19,7 @@
             <el-menu-item index="arkrole" disabled>角色列表</el-menu-item>
           </el-submenu>
           <el-menu-item index="about">关于</el-menu-item>
-          <el-menu-item><a href="https://www.husei.cn">作者博客</a></el-menu-item>
+          <el-menu-item><a href="https://www.fshusei.com">作者博客</a></el-menu-item>
         </el-menu>
       </div>
     </div>
