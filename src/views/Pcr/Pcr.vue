@@ -1,4 +1,5 @@
 <template>
+  <!--公主连结页面-->
   <div id="main">
     <TopNav></TopNav>
         <router-view></router-view>
@@ -7,7 +8,7 @@
 
 <script>
 // 注册组件
-import TopNav from '../components/TopNav'
+import TopNav from '../../components/indexComponents/TopNav'
 
 export default {
   name: 'index',
@@ -31,7 +32,7 @@ export default {
   #main {
     width: 100%;
     height: auto;
-    background-image: url("../assets/img/indexBg.webp");
+    background-image: url("../../assets/img/indexBg.webp");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;

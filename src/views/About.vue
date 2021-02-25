@@ -1,4 +1,5 @@
 <template>
+  <!--关于页面-->
   <div class="main">
     <div class="aboutmain">
       <el-card>
@@ -72,7 +73,7 @@
 
 <script>
 // 导入页脚组件
-import footermain from '../components/footermain'
+import footermain from '../components/indexComponents/FooterMain'
 
 export default {
   name: 'about',

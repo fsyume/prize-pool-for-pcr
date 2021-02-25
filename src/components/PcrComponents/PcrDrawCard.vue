@@ -3,7 +3,7 @@
     <div class="dcbox">
       <div class="msgdc">
         <div class="PDCmainbox">
-          <!--核心抽卡页面-->
+          <!--核心抽卡组件-->
           <div class="cards">
             <transition name="el-fade-in">
               <div v-show="show" class="transition-box">
@@ -82,8 +82,8 @@
 
 <script>
 // 导入页脚组件
-import footermain from '../components/footermain'
-import { Recruit } from '../../public/core/lottery'
+import footermain from '../indexComponents/FooterMain'
+import { Recruit } from '../../../public/core/lottery'
 
 export default {
   name: 'PcrDrawCard',
@@ -168,7 +168,7 @@ export default {
   .PDCmainbox {
     width: 890px;
     height: 455px;
-    background-image: url("../assets/img/pcrgachabg.jpg");
+    background-image: url("../../assets/img/pcrgachabg.jpg");
     display: flex;
     justify-content: center;
     align-items: center;

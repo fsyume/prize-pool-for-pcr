@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import pcr from '../views/pcr'
-import arknights from '../views/arknights'
-import about from '../views/about'
-import PcrDrawCard from '../components/PcrDrawCard'
+import pcr from '../views/Pcr/Pcr'
+import arknights from '../views/Ark/Arknights'
+import about from '../views/About'
+import PcrDrawCard from '../components/PcrComponents/PcrDrawCard'
 // import pcrrole from '../components/pcrrole'
 import index from '../views/index'
 import notfound from '../views/NotFound'
 import login from '../views/login.vue'
-import workbench from '../views/workbench.vue'
+import workbench from '../views/Workbench/Workbench.vue'
 
 Vue.use(VueRouter)
 
@@ -31,7 +31,7 @@ const routes = [
     component: login
   },
   {
-    path: '/wb',
+    path: '/workbench',
     meta: { title: '后台管理' },
     component: workbench
   },

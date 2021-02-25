@@ -1,4 +1,5 @@
 <template>
+  <!-- 404页面 -->
   <div class="bk">
       <div class="wrapper">
         <h1>404</h1>

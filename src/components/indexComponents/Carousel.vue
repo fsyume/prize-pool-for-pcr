@@ -1,5 +1,5 @@
 <template>
-<!--  走马灯-->
+  <!--走马灯-->
     <div>
       <el-carousel indicator-position="outside">
         <el-carousel-item v-for="item in imgbox" :key="item.id">
@@ -15,7 +15,7 @@ export default {
   // vue生命周期函数
   created () {
     // 读取走马灯图片json
-    var res = require('../../public/data/CarouselImgbox.json')
+    var res = require('../../../public/data/CarouselImgbox.json')
     this.imgbox = res.imgbox
     console.log(res.imgbox[0].url)
   },

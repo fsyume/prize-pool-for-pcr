@@ -1,4 +1,5 @@
 <template>
+<!--页脚-->
     <div class="footermain"></div>
 </template>
 

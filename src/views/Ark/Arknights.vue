@@ -1,4 +1,5 @@
 <template>
+<!-- 明日方舟页面 -->
 <div>
   <h1>Arknights奖池模拟</h1>
 </div>
