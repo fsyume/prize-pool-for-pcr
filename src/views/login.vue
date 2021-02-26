@@ -34,7 +34,7 @@
           >重置
           </el-button
           >
-          <el-button type="success">注册</el-button>
+          <el-button type="success" @click="register()">注册</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -84,7 +84,11 @@ export default {
         }
       })
     },
-
+    // 普通用户注册
+    register () {
+      // 跳转到登录页面
+      this.$router.push('/register')
+    },
     // 重置
     clearForm (formName) {
       this.$refs[formName].resetFields()

@@ -4,15 +4,16 @@ import pcr from '../views/Pcr/Pcr'
 import arknights from '../views/Ark/Arknights'
 import about from '../views/About'
 import PcrDrawCard from '../components/PcrComponents/PcrDrawCard'
-// import pcrrole from '../components/pcrrole'
 import index from '../views/index'
 import notfound from '../views/NotFound'
 import login from '../views/login.vue'
 import workbench from '../views/Workbench/Workbench.vue'
+import register from '../views/register'
 
 Vue.use(VueRouter)
 
 const routes = [
+  // 公主连结蛋池模拟
   {
     path: '/',
     component: pcr,
@@ -24,25 +25,34 @@ const routes = [
       { path: 'about', component: about, meta: { title: '关于|公主连结蛋池模拟' } }
     ]
   },
+  // 登录页面
   {
-    // 登录页面
     path: '/login',
     meta: { title: '管理员登录' },
     component: login
   },
+  // 注册页面
+  {
+    path: '/register',
+    meta: { title: '新用户注册' },
+    component: register
+  },
+  // 后台管理页面
   {
     path: '/workbench',
     meta: { title: '后台管理' },
     component: workbench
   },
+  // 明日方舟蛋池模拟
   {
     path: '/arknights',
     component: arknights,
     meta: {
       title: '明日方舟蛋池模拟'
     }
-  }, {
-    // 404路由
+  },
+  // 404路由
+  {
     path: '*',
     component: notfound,
     meta: { title: '页面走丢了~' }
