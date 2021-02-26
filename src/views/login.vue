@@ -70,10 +70,16 @@ export default {
         console.log(res.data)
         if (res.data.static === true) {
           console.log('登录成功')
+          // 在localStorage储存jwt
+          localStorage.setItem('jwt', res.data.token)
+          console.log(localStorage.getItem('jwt'))
+          // 成功登录弹窗
           this.$message.success('登录成功！欢迎~~')
-          this.$router.push('/wb')
+          // 登录成功后跳转页面
+          // this.$router.push('/workbench')
         } else {
           console.log('登录失败')
+          // 登录失败弹窗
           this.$message.error('登录失败，请检查用户名和密码')
         }
       })

@@ -49,6 +49,7 @@ const routes = [
   }
 ]
 
+// 将路由模式改成history模式
 const router = new VueRouter({
   mode: 'history',
   routes
