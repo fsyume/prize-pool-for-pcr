@@ -66,14 +66,56 @@
       </div>
     </div>
     <el-card>
-      <div class="msgbox">
-        次数：{{frequency}}
-        &nbsp;&nbsp;&nbsp;
-        宝石：{{gem}}
-        &nbsp;&nbsp;&nbsp;
-        消费：{{rmb}}RMB
-      </div>
-      <el-divider></el-divider>
+     <el-table :data="tableData"
+               style="width: 100%"
+               >
+       <el-table-column
+         fixed
+         prop="date"
+         label="日期"
+       >
+       </el-table-column>
+       <el-table-column
+         prop="frequency"
+         label="次数"
+       >
+       </el-table-column>
+       <el-table-column
+         prop="gem"
+         label="花费宝石"
+       >
+       </el-table-column>
+       <el-table-column
+         prop="rmb"
+         label="花费金钱（RMB）"
+       >
+       </el-table-column>
+     </el-table>
+      <el-table
+        :data="tableData2"
+        style="width: 100%">
+        <el-table-column
+          fixed
+          prop="onestar"
+          label="一星⭐"
+        >
+        </el-table-column>
+        <el-table-column
+          prop="twostar"
+          label="二星⭐⭐"
+        >
+        </el-table-column>
+        <el-table-column
+          prop="threestar"
+          label="三星⭐⭐⭐"
+        >
+        </el-table-column>
+        <el-table-column
+          prop="ShipmentRate"
+          label="出货率"
+        >
+        </el-table-column>
+      </el-table>
     </el-card>
     <!--页脚-->
     <footermain></footermain>
@@ -96,9 +138,6 @@ export default {
   },
   data () {
     return {
-      frequency: 0,
-      gem: 0,
-      rmb: 0,
       urls: {
         img1: '',
         img2: '',
@@ -111,14 +150,34 @@ export default {
         img9: '',
         img10: ''
       },
-      show: false
+      show: false,
+      tableData: [
+        {
+          date: new Date().toLocaleString(),
+          frequency: 0,
+          gem: 0,
+          rmb: 0
+        }
+      ],
+      tableData2: [
+        {
+          onestar: 0,
+          twostar: 0,
+          threestar: 0,
+          ShipmentRate: 0
+        }
+      ]
     }
   },
   methods: {
     onTenTimes () {
-      this.frequency = this.frequency + 10
-      this.gem = this.gem + 1500
-      this.rmb = this.rmb + 155
+      this.tableData[0].frequency = this.tableData[0].frequency + 10
+      this.tableData[0].gem = this.tableData[0].gem + 1500
+      this.tableData[0].rmb = this.tableData[0].rmb + 155
+      //
+      this.tableData2[0].onestar = Recruit.oneRecord
+      this.tableData2[0].twostar = Recruit.twoRecord
+      this.tableData2[0].threestar = Recruit.threeRecord
       //
       this.urls.img1 = Recruit.Start()
       this.urls.img2 = Recruit.Start()
@@ -136,9 +195,9 @@ export default {
     },
     // 重置按钮
     onClean () {
-      this.frequency = 0
-      this.gem = 0
-      this.rmb = 0
+      this.tableData[0].frequency = 0
+      this.tableData[0].gem = 0
+      this.tableData[0].rmb = 0
     }
   }
 }
@@ -156,13 +215,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .msgbox {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
   }
 
   .PDCmainbox {

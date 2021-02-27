@@ -1,11 +1,18 @@
-// 获取角色数据
+/**
+ * 获取角色数据
+ * @returns {{upthreestar: *, 注释: string, threestar: *, twostar: *, onestar: *}}
+ * @constructor
+ */
 function CharacterArray () {
   // 读取角色json
   var a = require('../../public/data/pcr.json')
   return a
 }
 
-// 随机数方法
+/**
+ * 随机角色图片方法
+ * @type {{a: {upthreestar: *, 注释: string, threestar: *, twostar: *, onestar: *}, threeSelectImg: (function(): *), twoSelectImg: (function(): *), oneSelectImg: (function(): *), randomNum: (function(): number)}}
+ */
 var rand = {
   // 读取pcr角色json
   a: require('../../public/data/pcr.json'),
@@ -38,7 +45,10 @@ var rand = {
   }
 }
 
-// 招募对象
+/**
+ * 招募对象
+ * @type {{Start: Recruit.Start, LastStart: Recruit.LastStart}}
+ */
 var Recruit = {
   // 前9发概率
   Start: function () {
@@ -46,13 +56,16 @@ var Recruit = {
     // 三星角色概率为2.5%
     if (x <= 2.5) {
       console.log('3星')
+      Recruit.threeRecord++
       return rand.threeSelectImg()
       // 二星角色概率为18%
     } else if (x <= 18 && x > 2.5) {
       console.log('2星')
+      Recruit.twoRecord++
       return rand.twoSelectImg()
     } else {
       console.log('1星')
+      Recruit.oneRecord++
       return rand.oneSelectImg()
     }
   },
@@ -61,12 +74,18 @@ var Recruit = {
     var x = rand.randomNum()
     if (x <= 2.5) {
       console.log('3星')
+      Recruit.threeRecord++
       return rand.threeSelectImg()
     } else {
       console.log('2星')
+      Recruit.twoRecord++
       return rand.twoSelectImg()
     }
-  }
+  },
+  // 记录出货情况
+  oneRecord: 0,
+  twoRecord: 0,
+  threeRecord: 0
 }
 
 // 模块抛出
