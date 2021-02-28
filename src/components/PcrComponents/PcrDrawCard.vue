@@ -1,4 +1,5 @@
 <template>
+  <!--公主连结核心抽卡组件-->
   <div>
     <div class="dcbox">
       <div class="msgdc">
