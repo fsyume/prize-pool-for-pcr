@@ -56,6 +56,14 @@
         <el-link type="danger" href="https://gitee.com/kzycn/PcrArk-draw-card"
           >🏆本站点码云地址</el-link
         >
+        &nbsp;&nbsp;
+        <el-link type="danger" href="https://gitee.com/kzycn/float"
+        >🏆本站点后端码云地址</el-link
+        >
+        &nbsp;&nbsp;
+        <el-link type="danger" href="https://www.fshusei.com/"
+        >🏆浮生Husei的博客</el-link
+        >
       </el-card>
       <el-card>
         <h2>建议反馈渠道</h2>
