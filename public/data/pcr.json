@@ -1,11 +1,14 @@
 {
-  "upthreestar": [{
-    "name": "",
-    "code": "",
-    "url": ""
-  }],
-  "注释":"三星角色",
-  "threestar": [{
+  "upthreestar": [
+    {
+      "name": "",
+      "code": "",
+      "url": ""
+    }
+  ],
+  "注释": "三星角色",
+  "threestar": [
+    {
       "name": "可可萝（新春）",
       "code": "30",
       "url": "https://patchwiki.biligame.com/images/pcr/4/48/iuhnggoyj05sicnw1oj7y96cfytgw9e.png"
@@ -171,8 +174,9 @@
       "url": "https://patchwiki.biligame.com/images/pcr/9/98/4qostpj00cvuozwjjl2po690k9iu994.png"
     }
   ],
-  "注释":"二星角色",
-  "twostar": [{
+  "注释": "二星角色",
+  "twostar": [
+    {
       "name": "雪",
       "code": "20",
       "url": "https://patchwiki.biligame.com/images/pcr/c/c3/f8eexvpqyqkccbjad1uucs9z9whwnuy.png"
@@ -278,8 +282,9 @@
       "url": "https://patchwiki.biligame.com/images/pcr/6/62/nu4e4h9eopdciqg2va9hf4c8fqjzq3q.png"
     }
   ],
-  "注释":"一星角色",
-  "onestar": [{
+  "注释": "一星角色",
+  "onestar": [
+    {
       "name": "优衣",
       "code": "10",
       "url": "https://patchwiki.biligame.com/images/pcr/1/18/h8ni7jp1oej5mk2al7v1rjofkd4nqis.png"
