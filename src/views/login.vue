@@ -43,6 +43,12 @@
 
 <script>
 export default {
+  // vue生命周期函数
+  beforeCreate () {
+    this.$alert('正在开发的页面，登录功能需要请求后台，本站点后台正在开发，码云搜索：float，作者：浮生Husei，即可下载到配套源码！', '警告！！！', {
+      confirmButtonText: '确定'
+    })
+  },
   data () {
     return {
       // 数据绑定
