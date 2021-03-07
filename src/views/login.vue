@@ -92,6 +92,7 @@ export default {
           // 成功登录弹窗
           this.$message.success('登录成功！欢迎~~')
           // 登录成功后跳转页面
+          localStorage.setItem('islogin', 1)
           this.$router.push('/workbench')
         } else {
           console.log('登录失败')
