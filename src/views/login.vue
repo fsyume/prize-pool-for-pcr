@@ -48,6 +48,16 @@ export default {
     this.$alert('正在开发的页面，登录功能需要请求后台，本站点后台正在开发，码云搜索：float，作者：浮生Husei，即可下载到配套源码！', '警告！！！', {
       confirmButtonText: '确定'
     })
+    // 添加请求拦截器
+    this.$http.interceptors.request.use(function (config) {
+      // 在发送请求之前做些什么
+      console.log('拦截器')
+      return config
+    }, function (error) {
+      // 对请求错误做些什么
+      console.log('拦截器')
+      return Promise.reject(error)
+    })
   },
   data () {
     return {
@@ -82,7 +92,7 @@ export default {
           // 成功登录弹窗
           this.$message.success('登录成功！欢迎~~')
           // 登录成功后跳转页面
-          // this.$router.push('/workbench')
+          this.$router.push('/workbench')
         } else {
           console.log('登录失败')
           // 登录失败弹窗
