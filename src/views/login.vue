@@ -63,8 +63,8 @@ export default {
     return {
       // 数据绑定
       loginForm: {
-        username: '',
-        password: ''
+        username: 'fshusei',
+        password: '123456'
       },
       // 表单验证
       loginRules: {
@@ -88,11 +88,12 @@ export default {
           console.log('登录成功')
           // 在localStorage储存jwt
           localStorage.setItem('jwt', res.data.token)
+          localStorage.setItem('islogin', 1)
           console.log(localStorage.getItem('jwt'))
+          // console.log(localStorage.getItem('islogin'))
           // 成功登录弹窗
           this.$message.success('登录成功！欢迎~~')
           // 登录成功后跳转页面
-          localStorage.setItem('islogin', 1)
           this.$router.push('/workbench')
         } else {
           console.log('登录失败')

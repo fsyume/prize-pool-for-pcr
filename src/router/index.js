@@ -9,8 +9,9 @@ import notfound from '../views/NotFound'
 import login from '../views/login.vue'
 import workbench from '../views/Workbench/Workbench.vue'
 import register from '../views/register'
+import Element from 'element-ui'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter, Element)
 
 const routes = [
   // 公主连结蛋池模拟
@@ -41,27 +42,7 @@ const routes = [
   {
     path: '/workbench',
     meta: { title: '后台管理' },
-    component: workbench,
-    beforeEnter: (to, from, next) => {
-      let islogin = localStorage.getItem('islogin')
-      islogin = Boolean(Number(islogin))
-
-      if (to.path === '/login') {
-        if (islogin) {
-          next('/workbench')
-        } else {
-          next()
-        }
-      } else {
-        // requireAuth:可以在路由元信息指定哪些页面需要登录权限
-        if (to.meta.requireAuth && islogin) {
-          next()
-        } else {
-          next('/login')
-        }
-      }
-    },
-    requireAuth: true
+    component: workbench
   },
   // 明日方舟蛋池模拟
   {
@@ -85,4 +66,20 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  if (to.path === '/workbench') {
+    const jwt = localStorage.getItem('jwt')
+    if (jwt != null) {
+      next()
+    } else {
+      Vue.prototype.$message({
+        type: 'error',
+        message: '请先登录'
+      })
+      next('/login')
+    }
+  } else {
+    next()
+  }
+})
 export default router
