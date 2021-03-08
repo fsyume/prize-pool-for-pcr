@@ -126,7 +126,7 @@
 <script>
 // 导入页脚组件
 import footermain from '../indexComponents/FooterMain'
-import { Recruit } from '../../../public/core/lottery'
+import { one, Recruit } from '../../../public/core/lottery'
 
 export default {
   name: 'PcrDrawCard',
@@ -176,10 +176,6 @@ export default {
       this.tableData[0].gem = this.tableData[0].gem + 1500
       this.tableData[0].rmb = this.tableData[0].rmb + 155
       //
-      this.tableData2[0].onestar = Recruit.oneRecord()
-      this.tableData2[0].twostar = Recruit.twoRecord
-      this.tableData2[0].threestar = Recruit.threeRecord
-      //
       this.urls.img1 = Recruit.Start()
       this.urls.img2 = Recruit.Start()
       this.urls.img3 = Recruit.Start()
@@ -190,6 +186,10 @@ export default {
       this.urls.img8 = Recruit.Start()
       this.urls.img9 = Recruit.Start()
       this.urls.img10 = Recruit.LastStart()
+      //
+      this.tableData2[0].onestar = one
+      this.tableData2[0].twostar = Recruit.twoRecord
+      this.tableData2[0].threestar = Recruit.threeRecord
       // 下方两行为测试代码
       // var a = require('../../public/data/pcr.json')
       // this.urls.img1 = a.threestar[0].url

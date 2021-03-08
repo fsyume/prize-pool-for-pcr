@@ -41,6 +41,8 @@ var rand = {
     // [0.18]的随机整数
     var x = Math.floor(Math.random() * (18 + 1))
     var b = this.a.onestar[x].url
+    ++one
+    localStorage.setItem('one', String(one))
     return b
   }
 }
@@ -49,7 +51,15 @@ var rand = {
  * 招募对象
  * @type {{Start: Recruit.Start, LastStart: Recruit.LastStart}}
  */
+var one = 0
+
 var Recruit = {
+  // 记录出货情况
+  oneRecord: 0,
+  // var twoRecord = 0
+  //
+  // var threeRecord = 0
+
   // 前9发概率
   Start: function () {
     var x = rand.randomNum()
@@ -63,7 +73,7 @@ var Recruit = {
       return rand.twoSelectImg()
     } else {
       console.log('1星')
-      Recruit.oneRecord()
+      Recruit.oneRecord++
       return rand.oneSelectImg()
     }
   },
@@ -78,23 +88,10 @@ var Recruit = {
       return rand.twoSelectImg()
     }
   },
-  // 记录出货情况
-  oneRecord: function () {
-    var a = 0
-    console.count('一星')
-    return a++
-  },
-  twoRecord: function () {
-    var two = 0
-    two++
-    localStorage.setItem('twoRecord', two)
-    console.log(localStorage.setItem('twoRecord', two))
-  },
-  threeRecord: function () {
-    var three = 0
-    three++
-    localStorage.setItem('threeRecord', three)
-    console.log(localStorage.setItem('threeRecord', three))
+  lastoneRecord: function () {
+    var a = Recruit.oneRecord
+    localStorage.setItem('one', String(a))
+    return localStorage.getItem('one')
   }
 }
 
@@ -102,5 +99,6 @@ var Recruit = {
 export {
   CharacterArray,
   Recruit,
-  rand
+  rand,
+  one
 }
