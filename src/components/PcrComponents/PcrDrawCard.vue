@@ -176,7 +176,7 @@ export default {
       this.tableData[0].gem = this.tableData[0].gem + 1500
       this.tableData[0].rmb = this.tableData[0].rmb + 155
       //
-      this.tableData2[0].onestar = Recruit.oneRecord
+      this.tableData2[0].onestar = Recruit.oneRecord()
       this.tableData2[0].twostar = Recruit.twoRecord
       this.tableData2[0].threestar = Recruit.threeRecord
       //

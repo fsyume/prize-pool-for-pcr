@@ -56,16 +56,14 @@ var Recruit = {
     // 三星角色概率为2.5%
     if (x <= 2.5) {
       console.log('3星')
-      Recruit.threeRecord++
       return rand.threeSelectImg()
       // 二星角色概率为18%
     } else if (x <= 18 && x > 2.5) {
       console.log('2星')
-      Recruit.twoRecord++
       return rand.twoSelectImg()
     } else {
       console.log('1星')
-      Recruit.oneRecord++
+      Recruit.oneRecord()
       return rand.oneSelectImg()
     }
   },
@@ -74,18 +72,30 @@ var Recruit = {
     var x = rand.randomNum()
     if (x <= 2.5) {
       console.log('3星')
-      Recruit.threeRecord++
       return rand.threeSelectImg()
     } else {
       console.log('2星')
-      Recruit.twoRecord++
       return rand.twoSelectImg()
     }
   },
   // 记录出货情况
-  oneRecord: 0,
-  twoRecord: 0,
-  threeRecord: 0
+  oneRecord: function () {
+    var a = 0
+    console.count('一星')
+    return a++
+  },
+  twoRecord: function () {
+    var two = 0
+    two++
+    localStorage.setItem('twoRecord', two)
+    console.log(localStorage.setItem('twoRecord', two))
+  },
+  threeRecord: function () {
+    var three = 0
+    three++
+    localStorage.setItem('threeRecord', three)
+    console.log(localStorage.setItem('threeRecord', three))
+  }
 }
 
 // 模块抛出
