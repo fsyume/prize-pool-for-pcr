@@ -42,7 +42,27 @@ const routes = [
   {
     path: '/workbench',
     meta: { title: '后台管理' },
-    component: workbench
+    component: workbench,
+    beforeEnter: (to, from, next) => {
+      let islogin = localStorage.getItem('islogin')
+      islogin = Boolean(Number(islogin))
+
+      if (to.path === '/login') {
+        if (islogin) {
+          next('/workbench')
+        } else {
+          next()
+        }
+      } else {
+        // requireAuth:可以在路由元信息指定哪些页面需要登录权限
+        if (to.meta.requireAuth && islogin) {
+          next()
+        } else {
+          next('/login')
+        }
+      }
+    },
+    requireAuth: true
   },
   // 明日方舟蛋池模拟
   {
