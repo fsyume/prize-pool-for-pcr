@@ -60,8 +60,8 @@ var rand = {
 }
 
 /**
- * 招募对象
- * @type {{Start: Recruit.Start, LastStart: Recruit.LastStart}}
+ * 招募js对象
+ * @type {{Start: Recruit.Start, LastStart: Recruit.LastStart, lastoneRecord: (function(): string)}}
  */
 
 var Recruit = {
@@ -100,10 +100,21 @@ var Recruit = {
   }
 }
 
+/**
+ * 刷新方法
+ * @constructor
+ */
+function Refresh () {
+  Record.one = 0
+  Record.two = 0
+  Record.three = 0
+}
+
 // 模块抛出
 export {
   CharacterArray,
   Recruit,
   rand,
-  Record
+  Record,
+  Refresh
 }

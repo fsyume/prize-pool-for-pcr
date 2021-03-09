@@ -126,7 +126,7 @@
 <script>
 // 导入页脚组件
 import footermain from '../indexComponents/FooterMain'
-import { Record, Recruit } from '../../../public/core/lottery'
+import { Record, Recruit, Refresh } from '../../../public/core/lottery'
 
 export default {
   name: 'PcrDrawCard',
@@ -172,10 +172,11 @@ export default {
   },
   methods: {
     onTenTimes () {
+      // 次数信息数据
       this.tableData[0].frequency = this.tableData[0].frequency + 10
       this.tableData[0].gem = this.tableData[0].gem + 1500
       this.tableData[0].rmb = this.tableData[0].rmb + 155
-      //
+      // 图像数据
       this.urls.img1 = Recruit.Start()
       this.urls.img2 = Recruit.Start()
       this.urls.img3 = Recruit.Start()
@@ -186,10 +187,11 @@ export default {
       this.urls.img8 = Recruit.Start()
       this.urls.img9 = Recruit.Start()
       this.urls.img10 = Recruit.LastStart()
-      //
+      // 出货记录数据
       this.tableData2[0].onestar = Record.one
       this.tableData2[0].twostar = Record.two
       this.tableData2[0].threestar = Record.three
+      this.tableData2[0].ShipmentRate = Record.three / this.tableData[0].frequency
       // 下方两行为测试代码
       // var a = require('../../public/data/pcr.json')
       // this.urls.img1 = a.threestar[0].url
@@ -199,6 +201,12 @@ export default {
       this.tableData[0].frequency = 0
       this.tableData[0].gem = 0
       this.tableData[0].rmb = 0
+      // 出货记录数据归零
+      this.tableData2[0].onestar = 0
+      this.tableData2[0].twostar = 0
+      this.tableData2[0].threestar = 0
+      this.tableData2[0].ShipmentRate = 0
+      Refresh()
     }
   }
 }
