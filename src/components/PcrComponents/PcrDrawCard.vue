@@ -126,7 +126,7 @@
 <script>
 // 导入页脚组件
 import footermain from '../indexComponents/FooterMain'
-import { one, Recruit } from '../../../public/core/lottery'
+import { Record, Recruit } from '../../../public/core/lottery'
 
 export default {
   name: 'PcrDrawCard',
@@ -187,9 +187,9 @@ export default {
       this.urls.img9 = Recruit.Start()
       this.urls.img10 = Recruit.LastStart()
       //
-      this.tableData2[0].onestar = one
-      this.tableData2[0].twostar = Recruit.twoRecord
-      this.tableData2[0].threestar = Recruit.threeRecord
+      this.tableData2[0].onestar = Record.one
+      this.tableData2[0].twostar = Record.two
+      this.tableData2[0].threestar = Record.three
       // 下方两行为测试代码
       // var a = require('../../public/data/pcr.json')
       // this.urls.img1 = a.threestar[0].url

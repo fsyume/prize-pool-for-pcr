@@ -10,6 +10,16 @@ function CharacterArray () {
 }
 
 /**
+ * 记录出货情况
+ * @type {{one: number, two: number, three: number}}
+ */
+var Record = {
+  one: 0,
+  two: 0,
+  three: 0
+}
+
+/**
  * 随机角色图片方法
  * @type {{a: {upthreestar: *, 注释: string, threestar: *, twostar: *, onestar: *}, threeSelectImg: (function(): *), twoSelectImg: (function(): *), oneSelectImg: (function(): *), randomNum: (function(): number)}}
  */
@@ -27,6 +37,7 @@ var rand = {
     // [0.32]的随机整数
     var x = Math.floor(Math.random() * (32 + 1))
     var b = this.a.threestar[x].url
+    ++Record.three
     return b
   },
   // 二星角色图片数组随机挑选
@@ -34,6 +45,7 @@ var rand = {
     // [0.20]的随机整数
     var x = Math.floor(Math.random() * (20 + 1))
     var b = this.a.twostar[x].url
+    ++Record.two
     return b
   },
   // 一星角色图片数组随机挑选
@@ -41,8 +53,8 @@ var rand = {
     // [0.18]的随机整数
     var x = Math.floor(Math.random() * (18 + 1))
     var b = this.a.onestar[x].url
-    ++one
-    localStorage.setItem('one', String(one))
+    ++Record.one
+    localStorage.setItem('one', String(Record.one))
     return b
   }
 }
@@ -51,15 +63,8 @@ var rand = {
  * 招募对象
  * @type {{Start: Recruit.Start, LastStart: Recruit.LastStart}}
  */
-var one = 0
 
 var Recruit = {
-  // 记录出货情况
-  oneRecord: 0,
-  // var twoRecord = 0
-  //
-  // var threeRecord = 0
-
   // 前9发概率
   Start: function () {
     var x = rand.randomNum()
@@ -100,5 +105,5 @@ export {
   CharacterArray,
   Recruit,
   rand,
-  one
+  Record
 }
