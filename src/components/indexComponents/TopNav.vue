@@ -18,6 +18,7 @@
             <el-menu-item class="item1" index="arknights" disabled>蛋池模拟</el-menu-item>
             <el-menu-item index="arkrole" disabled>角色列表</el-menu-item>
           </el-submenu>
+          <el-menu-item class="item1" index="commentarea">评论区</el-menu-item>
           <el-menu-item index="about">关于</el-menu-item>
           <el-menu-item index="login">登录</el-menu-item>
         </el-menu>
@@ -55,7 +56,7 @@ h2{
   margin-left: 30px;
 }
 .nav2{
-  width: 575px;
+  width: 630px;
   /*margin-right: 20px;*/
 }
 </style>

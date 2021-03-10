@@ -118,6 +118,7 @@
         </el-table-column>
       </el-table>
     </el-card>
+    <PcrProbability></PcrProbability>
     <!--页脚-->
     <footermain></footermain>
   </div>
@@ -127,13 +128,14 @@
 // 导入页脚组件
 import footermain from '../indexComponents/FooterMain'
 import { Record, Recruit, Refresh } from '../../../public/core/lottery'
+import PcrProbability from './PcrProbability'
 
 export default {
   name: 'PcrDrawCard',
-  components: { footermain },
+  components: { PcrProbability, footermain },
   // vue生命周期函数
   created () {
-    this.$alert('正在开发的页面，其中记录出货情况的表格的表格数据并不准确，望周知！！！', '警告！！！', {
+    this.$alert('正在开发的页面，其中概率调整还未实现，望周知！！！', '警告！！！', {
       confirmButtonText: '确定'
     })
   },

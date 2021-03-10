@@ -10,6 +10,7 @@ import login from '../views/login.vue'
 import workbench from '../views/Workbench/Workbench.vue'
 import register from '../views/register'
 import Element from 'element-ui'
+import CommentArea from '../views/Comment/CommentArea'
 
 Vue.use(VueRouter, Element)
 
@@ -70,6 +71,14 @@ const routes = [
     component: arknights,
     meta: {
       title: '明日方舟蛋池模拟'
+    }
+  },
+  // 评论区
+  {
+    path: '/commentarea',
+    component: CommentArea,
+    meta: {
+      title: '评论区'
     }
   },
   // 404路由
