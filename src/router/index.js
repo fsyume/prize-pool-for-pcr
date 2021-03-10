@@ -9,8 +9,9 @@ import notfound from '../views/NotFound'
 import login from '../views/login.vue'
 import workbench from '../views/Workbench/Workbench.vue'
 import register from '../views/register'
+import Element from 'element-ui'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter, Element)
 
 const routes = [
   // 公主连结蛋池模拟
@@ -85,4 +86,20 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  if (to.path === '/workbench') {
+    const jwt = localStorage.getItem('jwt')
+    if (jwt != null) {
+      next()
+    } else {
+      Vue.prototype.$message({
+        type: 'error',
+        message: '请先登录'
+      })
+      next('/login')
+    }
+  } else {
+    next()
+  }
+})
 export default router
