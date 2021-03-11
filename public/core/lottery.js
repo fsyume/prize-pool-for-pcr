@@ -34,8 +34,8 @@ var rand = {
   },
   // 三星角色图片数组随机挑选
   threeSelectImg: function () {
-    // [0.32]的随机整数
-    var x = Math.floor(Math.random() * (32 + 1))
+    // [0.19]的随机整数
+    var x = Math.floor(Math.random() * (19 + 1))
     var b = this.a.threestar[x].url
     ++Record.three
     return b
@@ -65,15 +65,18 @@ var rand = {
  */
 
 var Recruit = {
+  // 概率选择
+  Probability: 2.5,
   // 前9发概率
   Start: function () {
     var x = rand.randomNum()
     // 三星角色概率为2.5%
-    if (x <= 2.5) {
-      console.log('3星')
+    if (x <= Recruit.Probability) {
+      console.log('3星，当前概率为')
+      console.log(Recruit.Probability)
       return rand.threeSelectImg()
       // 二星角色概率为18%
-    } else if (x <= 18 && x > 2.5) {
+    } else if (x <= 18 && x > Recruit.Probability) {
       console.log('2星')
       return rand.twoSelectImg()
     } else {
@@ -85,7 +88,7 @@ var Recruit = {
   // 最后第10发的概率
   LastStart: function () {
     var x = rand.randomNum()
-    if (x <= 2.5) {
+    if (x <= Recruit.Probability) {
       console.log('3星')
       return rand.threeSelectImg()
     } else {

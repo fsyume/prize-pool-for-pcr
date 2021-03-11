@@ -193,7 +193,7 @@ export default {
       this.tableData2[0].onestar = Record.one
       this.tableData2[0].twostar = Record.two
       this.tableData2[0].threestar = Record.three
-      this.tableData2[0].ShipmentRate = Record.three / this.tableData[0].frequency
+      this.tableData2[0].ShipmentRate = this.percentage()
       // 下方两行为测试代码
       // var a = require('../../public/data/pcr.json')
       // this.urls.img1 = a.threestar[0].url
@@ -209,6 +209,13 @@ export default {
       this.tableData2[0].threestar = 0
       this.tableData2[0].ShipmentRate = 0
       Refresh()
+    },
+    // 出货率百分比方法
+    percentage () {
+      var a = Record.three / this.tableData[0].frequency
+      var str = Number(a * 100).toFixed(1)
+      str += '%'
+      return str
     }
   }
 }
