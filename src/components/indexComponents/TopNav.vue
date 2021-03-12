@@ -10,7 +10,7 @@
           <el-menu-item index="/">首页</el-menu-item>
           <el-submenu index="pcr">
             <template slot="title">公主连结Re:Dive</template>
-            <el-menu-item class="item1" index="pcrdrawcard">蛋池模拟</el-menu-item>
+            <el-menu-item class="item1" index="pcrdrawcard">天井模拟</el-menu-item>
             <el-menu-item class="item1" index="pcrrole" disabled>角色列表</el-menu-item>
           </el-submenu>
           <el-submenu index="ark">
