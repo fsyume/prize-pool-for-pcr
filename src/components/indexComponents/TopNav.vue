@@ -2,7 +2,7 @@
 <!-- 顶部导航 -->
     <div class="main">
       <div class="nav1">
-        <h2>公主连结蛋池模拟</h2>
+        <img src="../../assets/img/pcrlogo.png">
       </div>
       <div class="nav2">
         <!--设置router为true，将以index为path进行路由跳转-->
@@ -54,6 +54,9 @@ h2{
 .nav1{
   width: 300px;
   margin-left: 30px;
+}
+.nav1 img{
+  width: 120px;
 }
 .nav2{
   width: 630px;
