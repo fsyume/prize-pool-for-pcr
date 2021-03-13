@@ -1,13 +1,14 @@
 {
-  "upthreestar": [
+  "注释": "概率up角色",
+  "upThreestar": [
     {
       "name": "",
       "code": "",
       "url": ""
     }
   ],
-  "注释": "三星角色",
-  "threestar": [
+  "注释":"限定三星角色",
+  "limitedThreestar": [
     {
       "name": "可可萝（新春）",
       "code": "30",
@@ -24,16 +25,6 @@
       "url": "https://patchwiki.biligame.com/images/pcr/2/2f/772lsuc3hyalufceswg0esamcllhr9n.png"
     },
     {
-      "name": "镜华",
-      "code": "33",
-      "url": "https://patchwiki.biligame.com/images/pcr/1/11/kf7jk1e35kfnqqvdd9l0y5f408ktm40.png"
-    },
-    {
-      "name": "真步",
-      "code": "34",
-      "url": "https://patchwiki.biligame.com/images/pcr/7/72/jb3637kcjwh7z9559n3ca377tkldr0t.png"
-    },
-    {
       "name": "千歌（圣诞节）",
       "code": "35",
       "url": "https://patchwiki.biligame.com/images/pcr/d/dd/jqdfzc8ruvgeuv09bvgrdmhc5la017c.png"
@@ -44,14 +35,67 @@
       "url": "https://patchwiki.biligame.com/images/pcr/2/23/f2dljlbsid6btv912hunyohnebqe3n1.png"
     },
     {
-      "name": "初音",
-      "code": "37",
-      "url": "https://patchwiki.biligame.com/images/pcr/b/ba/e1q3ot9mhbtqh7nsgpnc5bp39idld6s.png"
+      "name": "环奈（振袖）",
+      "code": "312",
+      "url": "https://patchwiki.biligame.com/images/pcr/3/36/6mupkkg0r4k3apvliechmsreri7fc38.png"
+    },
+    {
+      "name": "忍（万圣节）",
+      "code": "313",
+      "url": "https://patchwiki.biligame.com/images/pcr/8/80/hwmi41hx1nqfpn2yru2v3g4xi3xo377.png"
     },
     {
       "name": "优衣（新年）",
       "code": "38",
       "url": "https://patchwiki.biligame.com/images/pcr/f/f5/kieyz1llmwrmdtvo2wbl9go0nq3ssa2.png"
+    },
+    {
+      "name": "克里斯提娜",
+      "code": "320",
+      "url": "https://patchwiki.biligame.com/images/pcr/6/64/0fiboyjsfpidpeiqy5olahr76tuh5v3.png"
+    },
+    {
+      "name": "佩可莉姆（夏日）",
+      "code": "323",
+      "url": "https://patchwiki.biligame.com/images/pcr/8/83/mb18kfcfo4ozorh0j8bplmve049poyd.png"
+    },
+    {
+      "name": "珠希（夏日）",
+      "code": "324",
+      "url": "https://patchwiki.biligame.com/images/pcr/7/7c/3g315v3otrc7tgxhl7snky4qdl7iaqm.png"
+    },
+    {
+      "name": "绫音（圣诞节）",
+      "code": "326",
+      "url": "https://patchwiki.biligame.com/images/pcr/e/e7/o9jg48nqow11dheuce4ia0pfsi9pwri.png"
+    },
+    {
+      "name": "日和莉（新年）",
+      "code": "328",
+      "url": "https://patchwiki.biligame.com/images/pcr/9/94/n7vfjbovwwoekbjr9n2ut4k66m9pvta.png"
+    },
+    {
+      "name": "环奈",
+      "code": "315",
+      "url": "https://patchwiki.biligame.com/images/pcr/3/38/jr2fzqsugofd74jjigvdxic1ioe264a.png"
+    }
+  ],
+  "注释": "三星角色",
+  "threestar": [
+    {
+      "name": "镜华",
+      "code": "33",
+      "url": "https://patchwiki.biligame.com/images/pcr/1/11/kf7jk1e35kfnqqvdd9l0y5f408ktm40.png"
+    },
+    {
+      "name": "真步",
+      "code": "34",
+      "url": "https://patchwiki.biligame.com/images/pcr/7/72/jb3637kcjwh7z9559n3ca377tkldr0t.png"
+    },
+    {
+      "name": "初音",
+      "code": "37",
+      "url": "https://patchwiki.biligame.com/images/pcr/b/ba/e1q3ot9mhbtqh7nsgpnc5bp39idld6s.png"
     },
     {
       "name": "伊绪",
@@ -69,24 +113,9 @@
       "url": "https://patchwiki.biligame.com/images/pcr/7/7c/9mlr4cmt1yol6qam0k5eetgqpoy9wao.png"
     },
     {
-      "name": "环奈（振袖）",
-      "code": "312",
-      "url": "https://patchwiki.biligame.com/images/pcr/3/36/6mupkkg0r4k3apvliechmsreri7fc38.png"
-    },
-    {
-      "name": "忍（万圣节）",
-      "code": "313",
-      "url": "https://patchwiki.biligame.com/images/pcr/8/80/hwmi41hx1nqfpn2yru2v3g4xi3xo377.png"
-    },
-    {
       "name": "杏奈",
       "code": "314",
       "url": "https://patchwiki.biligame.com/images/pcr/7/72/edy145bksvw972yhfpfgp8qbquhsi1j.png"
-    },
-    {
-      "name": "环奈",
-      "code": "315",
-      "url": "https://patchwiki.biligame.com/images/pcr/3/38/jr2fzqsugofd74jjigvdxic1ioe264a.png"
     },
     {
       "name": "咲恋",
@@ -109,11 +138,6 @@
       "url": "https://patchwiki.biligame.com/images/pcr/0/03/smxy5tsyd5t92fqk5onwy56hlvbobb1.png"
     },
     {
-      "name": "克里斯提娜",
-      "code": "320",
-      "url": "https://patchwiki.biligame.com/images/pcr/6/64/0fiboyjsfpidpeiqy5olahr76tuh5v3.png"
-    },
-    {
       "name": "静流",
       "code": "321",
       "url": "https://patchwiki.biligame.com/images/pcr/0/00/0koylmjvym7s63y8xmz9skaa1xfuo0t.png"
@@ -124,34 +148,14 @@
       "url": "https://patchwiki.biligame.com/images/pcr/7/7f/j62dyqwinraqa1jhcey51t2xgpl3kkq.png"
     },
     {
-      "name": "佩可莉姆（夏日）",
-      "code": "323",
-      "url": "https://patchwiki.biligame.com/images/pcr/8/83/mb18kfcfo4ozorh0j8bplmve049poyd.png"
-    },
-    {
-      "name": "珠希（夏日）",
-      "code": "324",
-      "url": "https://patchwiki.biligame.com/images/pcr/7/7c/3g315v3otrc7tgxhl7snky4qdl7iaqm.png"
-    },
-    {
       "name": "智",
       "code": "325",
       "url": "https://patchwiki.biligame.com/images/pcr/d/dd/rwvxsrizn5d3ta9gxnv7t0v7cza7y56.png"
     },
     {
-      "name": "绫音（圣诞节）",
-      "code": "326",
-      "url": "https://patchwiki.biligame.com/images/pcr/e/e7/o9jg48nqow11dheuce4ia0pfsi9pwri.png"
-    },
-    {
       "name": "秋乃",
       "code": "327",
       "url": "https://patchwiki.biligame.com/images/pcr/a/a9/hj9uxkawbpguzfrpkrr6ymjwff6vmym.png"
-    },
-    {
-      "name": "日和莉（新年）",
-      "code": "328",
-      "url": "https://patchwiki.biligame.com/images/pcr/9/94/n7vfjbovwwoekbjr9n2ut4k66m9pvta.png"
     },
     {
       "name": "真琴",

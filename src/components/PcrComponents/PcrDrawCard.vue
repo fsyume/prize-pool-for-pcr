@@ -118,6 +118,7 @@
         </el-table-column>
       </el-table>
     </el-card>
+    <PcrProbability></PcrProbability>
     <!--页脚-->
     <footermain></footermain>
   </div>
@@ -127,13 +128,14 @@
 // 导入页脚组件
 import footermain from '../indexComponents/FooterMain'
 import { Record, Recruit, Refresh } from '../../../public/core/lottery'
+import PcrProbability from './PcrProbability'
 
 export default {
   name: 'PcrDrawCard',
-  components: { footermain },
+  components: { PcrProbability, footermain },
   // vue生命周期函数
   created () {
-    this.$alert('正在开发的页面，其中记录出货情况的表格的表格数据并不准确，望周知！！！', '警告！！！', {
+    this.$alert('正在开发的页面，其中概率调整还未实现，望周知！！！', '警告！！！', {
       confirmButtonText: '确定'
     })
   },
@@ -191,7 +193,7 @@ export default {
       this.tableData2[0].onestar = Record.one
       this.tableData2[0].twostar = Record.two
       this.tableData2[0].threestar = Record.three
-      this.tableData2[0].ShipmentRate = Record.three / this.tableData[0].frequency
+      this.tableData2[0].ShipmentRate = this.percentage()
       // 下方两行为测试代码
       // var a = require('../../public/data/pcr.json')
       // this.urls.img1 = a.threestar[0].url
@@ -207,6 +209,13 @@ export default {
       this.tableData2[0].threestar = 0
       this.tableData2[0].ShipmentRate = 0
       Refresh()
+    },
+    // 出货率百分比方法
+    percentage () {
+      var a = Record.three / this.tableData[0].frequency
+      var str = Number(a * 100).toFixed(1)
+      str += '%'
+      return str
     }
   }
 }
