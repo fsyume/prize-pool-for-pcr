@@ -4,6 +4,8 @@
 #### 介绍
 公主连结Re:Dive&明日方舟Arknights奖池页面
 
+[后端项目地址](https://gitee.com/kzycn/float)
+
 #### 软件架构
 vue.js
 
