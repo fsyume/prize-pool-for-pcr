@@ -3,10 +3,10 @@
       <TopnavComment></TopnavComment>
       <div class="block">
         <el-timeline>
-          <el-timeline-item timestamp="2018/4/12" placement="top">
+          <el-timeline-item :timestamp="comment.created" placement="top" v-for="(comment, index) in comment" :key="index">
             <el-card>
-              <h4>更新 Github 模板</h4>
-              <p>王小虎 提交于 2018/4/12 20:46</p>
+              <h4>{{comment.title}}</h4>
+              <p>{{comment.description}}</p>
             </el-card>
           </el-timeline-item>
         </el-timeline>
@@ -24,7 +24,29 @@
 import TopnavComment from '../../components/CommentComponents/TopnavComment'
 export default {
   name: 'CommentArea',
-  components: { TopnavComment }
+  components: { TopnavComment },
+  data () {
+    return {
+      comment: {},
+      currentPage: 1,
+      total: 0,
+      pageSize: 5
+    }
+  },
+  methods: {
+    page () {
+      this.$http.get('/comment/list').then(res => {
+        console.log(res.data)
+        this.comment = res.data.page.list
+        this.currentPage = res.data.page.pageNum
+        this.total = res.data.page.total
+        this.pageSize = res.data.page.pageSize
+      })
+    }
+  },
+  created () {
+    this.page()
+  }
 }
 </script>
 

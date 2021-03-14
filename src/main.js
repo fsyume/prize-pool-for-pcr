@@ -10,6 +10,8 @@ Vue.config.productionTip = false
 // Vue.use(VueAxios)
 Vue.prototype.$http = VueAxios
 
+VueAxios.defaults.baseURL = 'http://localhost:8081'
+
 // 自定义标签标题
 router.beforeEach((to, from, next) => {
   if (to.meta.title) {
