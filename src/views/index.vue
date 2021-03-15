@@ -6,25 +6,6 @@
     <div class="cardBox">
       <el-card class="card1">
         <el-calendar v-model="value">
-          <template
-            slot="dateCell"
-            slot-scope="{date, data}">
-            <!--自定义内容-->
-            <div>
-              <div class="calendar-day">{{ data.day.split('-').slice(2).join('-') }}</div>
-              <div v-for="item in calendarData" :key="item">
-                <div v-if="(item.months).indexOf(data.day.split('-').slice(1)[0])!=-1">
-                  <div v-if="(item.days).indexOf(data.day.split('-').slice(2).join('-'))!=-1">
-                    <el-tooltip class="item" effect="dark" :content="item.things" placement="right">
-                      <div class="is-selected">{{item.things}}</div>
-                    </el-tooltip>
-                  </div>
-                  <div v-else></div>
-                </div>
-                <div v-else></div>
-              </div>
-            </div>
-          </template>
         </el-calendar>
       </el-card>
 <!--      <el-card class="card2">-->
@@ -47,12 +28,6 @@ export default {
   components: { Carousel, footermain },
   data () {
     return {
-      calendarData: [
-        { months: ['03', '11'], days: ['15'], things: '看电影' },
-        { months: ['03', '11'], days: ['22'], things: '去公园野炊' },
-        { months: ['03'], days: ['02'], things: '看星星' },
-        { months: ['03'], days: ['01'], things: '看月亮' }
-      ],
       value: new Date()
     }
   },

@@ -82,7 +82,7 @@ export default {
   methods: {
     // 登录
     userLogin () {
-      this.$http.post('http://localhost:8081/user/loginp', this.loginForm).then((res) => {
+      this.$http.post('/user/loginp', this.loginForm).then((res) => {
         console.log(res.data)
         if (res.data.static === true) {
           console.log('登录成功')
