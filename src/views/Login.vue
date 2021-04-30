@@ -45,7 +45,7 @@
 export default {
   // vue生命周期函数
   beforeCreate () {
-    this.$alert('正在开发的页面，登录功能需要请求后台，本站点后台正在开发，码云搜索：float，作者：浮生Husei，即可下载到配套源码！', '警告！！！', {
+    this.$alert('正在开发的页面，登录功能需要请求后台，本站点后台正在开发,作者：浮生yume ', '警告！！！', {
       confirmButtonText: '确定'
     })
     // 添加请求拦截器
@@ -63,7 +63,7 @@ export default {
     return {
       // 数据绑定
       loginForm: {
-        username: 'fshusei',
+        username: 'fsyume',
         password: '123456'
       },
       // 表单验证
@@ -82,15 +82,14 @@ export default {
   methods: {
     // 登录
     userLogin () {
-      this.$http.post('/user/loginp', this.loginForm).then((res) => {
-        console.log(res.data)
-        if (res.data.static === true) {
+      this.$http.post('/api/userLogin.php', this.loginForm).then((res) => {
+        console.log(res.data[0])
+        if (res.data[0].static == true) {
           console.log('登录成功')
-          // 在localStorage储存jwt
-          localStorage.setItem('jwt', res.data.token)
-          localStorage.setItem('islogin', 1)
-          console.log(localStorage.getItem('jwt'))
-          // console.log(localStorage.getItem('islogin'))
+          // 在sessionStorage储存jwt
+          // sessionStorage.setItem('jwt', res.data.token)
+          sessionStorage.setItem('uid', res.data[0].usermsg[0].uid)
+          console.log(sessionStorage.getItem('uid'))
           // 成功登录弹窗
           this.$message.success('登录成功！欢迎~~')
           // 登录成功后跳转页面

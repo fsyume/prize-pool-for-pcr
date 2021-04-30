@@ -4,13 +4,16 @@ import router from './router'
 import VueAxios from 'axios'
 import './plugins/element.js'
 import './assets/css/style.css'
+import store from './store'
+import '@/utils/permission'
 
 Vue.config.productionTip = false
 
 // Vue.use(VueAxios)
 Vue.prototype.$http = VueAxios
 
-VueAxios.defaults.baseURL = 'http://localhost:8081'
+// 默认请求地址
+VueAxios.defaults.baseURL = 'http://api.husei.cn'
 
 // 自定义标签标题
 router.beforeEach((to, from, next) => {
@@ -22,5 +25,6 @@ router.beforeEach((to, from, next) => {
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')

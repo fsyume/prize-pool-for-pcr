@@ -4,11 +4,11 @@ import pcr from '../views/Pcr/Pcr'
 import arknights from '../views/Ark/Arknights'
 import about from '../views/About'
 import PcrDrawCard from '../components/PcrComponents/PcrDrawCard'
-import index from '../views/index'
+// import index from '../views/Index'
 import notfound from '../views/NotFound'
-import login from '../views/login.vue'
+import login from '../views/Login.vue'
 import workbench from '../views/Workbench/Workbench.vue'
-import register from '../views/register'
+import register from '../views/Register'
 import Element from 'element-ui'
 import CommentArea from '../views/Comment/CommentArea'
 
@@ -21,9 +21,8 @@ const routes = [
     component: pcr,
     meta: { title: '公主连结蛋池模拟' },
     children: [
-      { path: '/', component: index, meta: { title: '公主连结蛋池模拟' } },
-      // { path: 'pcrrole', component: pcrrole, meta: { title: '公主连结角色列表' } },
-      { path: 'pcrdrawcard', component: PcrDrawCard, meta: { title: '公主连结蛋池模拟' } },
+      // { path: '/', component: index, meta: { title: '公主连结蛋池模拟' } },
+      { path: '/', component: PcrDrawCard, meta: { title: '公主连结蛋池模拟' } },
       { path: 'about', component: about, meta: { title: '关于|公主连结蛋池模拟' } }
     ]
   },
@@ -42,28 +41,8 @@ const routes = [
   // 后台管理页面
   {
     path: '/workbench',
-    meta: { title: '后台管理' },
-    component: workbench,
-    beforeEnter: (to, from, next) => {
-      let islogin = localStorage.getItem('islogin')
-      islogin = Boolean(Number(islogin))
-
-      if (to.path === '/login') {
-        if (islogin) {
-          next('/workbench')
-        } else {
-          next()
-        }
-      } else {
-        // requireAuth:可以在路由元信息指定哪些页面需要登录权限
-        if (to.meta.requireAuth && islogin) {
-          next()
-        } else {
-          next('/login')
-        }
-      }
-    },
-    requireAuth: true
+    meta: { title: '后台管理', requireAuth: true },
+    component: workbench
   },
   // 明日方舟蛋池模拟
   {
@@ -78,7 +57,8 @@ const routes = [
     path: '/commentarea',
     component: CommentArea,
     meta: {
-      title: '评论区'
+      title: '评论区',
+      requireAuth: true
     }
   },
   // 404路由
@@ -95,20 +75,5 @@ const router = new VueRouter({
   routes
 })
 
-router.beforeEach((to, from, next) => {
-  if (to.path === '/workbench') {
-    const jwt = localStorage.getItem('jwt')
-    if (jwt != null) {
-      next()
-    } else {
-      Vue.prototype.$message({
-        type: 'error',
-        message: '请先登录'
-      })
-      next('/login')
-    }
-  } else {
-    next()
-  }
-})
+
 export default router

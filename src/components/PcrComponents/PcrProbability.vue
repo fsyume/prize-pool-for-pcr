@@ -32,6 +32,9 @@ export default {
       value: ''
     }
   },
+  created:{
+
+  },
   methods: {
     ProbabilityModification (value) {
       Recruit.lastoneRecord = value
