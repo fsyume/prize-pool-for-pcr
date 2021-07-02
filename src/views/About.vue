@@ -61,8 +61,8 @@
         >🏆本站点后端码云地址</el-link
         >
         &nbsp;&nbsp;
-        <el-link type="danger" href="https://www.fshusei.com/"
-        >🏆浮生Husei的博客</el-link
+        <el-link type="danger" href="https://www.fsyume.com/"
+        >🏆浮生yume的博客</el-link
         >
       </el-card>
       <el-card>
@@ -70,8 +70,8 @@
         <el-divider></el-divider>
         <el-link
           type="danger"
-          href="https://docs.qq.com/form/page/DV2Rkc09zQmJkSGlQ?_w_tencentdocx_form=1"
-          >📃【腾讯文档】网站建议反馈表</el-link
+          href="mailto:hi@fsyume.com"
+          >📃邮箱：hi@fsyume.com</el-link
         >
       </el-card>
     </div>

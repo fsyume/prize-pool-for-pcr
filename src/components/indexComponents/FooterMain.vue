@@ -1,6 +1,12 @@
 <template>
-<!--页脚-->
-    <div class="footermain"></div>
+  <!--页脚-->
+  <div class="footermain">
+    <span>©2020 - 2021 By</span>
+    <el-link href="https://www.fsyume.com/">
+      浮生yume
+    </el-link>
+
+  </div>
 </template>
 
 <script>
@@ -10,10 +16,13 @@ export default {
 </script>
 
 <style scoped>
-.footermain{
+.footermain {
   width: 100%;
   height: 50px;
   background-color: rgba(255, 255, 255);
   border-top: #ffa500 solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
