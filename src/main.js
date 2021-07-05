@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import MD5 from 'js-md5'
 import router from './router'
 import VueAxios from 'axios'
 import './plugins/element.js'
@@ -12,8 +13,11 @@ Vue.config.productionTip = false
 // Vue.use(VueAxios)
 Vue.prototype.$http = VueAxios
 
+//将md5转换成vue原型：
+Vue.prototype.md5 = MD5
+
 // 默认请求地址
-VueAxios.defaults.baseURL = 'http://api.husei.cn'
+VueAxios.defaults.baseURL = 'http://localhost:8091'
 
 // 自定义标签标题
 router.beforeEach((to, from, next) => {

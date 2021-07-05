@@ -6,13 +6,9 @@
     </div>
     <div class="nav2">
       <!--设置router为true，将以index为path进行路由跳转-->
-      <el-menu mode="horizontal" :unique-opened="true" background-color="#ffffff" active-text-color="#ffa500" :router="true">
-        <el-menu-item index="/">首页</el-menu-item>
-        <el-submenu index="pcr">
-          <template slot="title">公主连结Re:Dive</template>
-          <el-menu-item class="item1" index="pcrdrawcard">蛋池模拟</el-menu-item>
-          <el-menu-item class="item1" index="pcrrole" disabled>角色列表</el-menu-item>
-        </el-submenu>
+      <el-menu mode="horizontal" :unique-opened="true" background-color="#ffffff" active-text-color="#ffa500"
+               :router="true">
+        <el-menu-item class="item1" index="/">公主连结Re:Dive</el-menu-item>
         <el-menu-item index="about">关于</el-menu-item>
         <el-menu-item index="login">登录</el-menu-item>
         <el-menu-item index="login">发表评论</el-menu-item>
@@ -28,30 +24,34 @@ export default {
 </script>
 
 <style scoped>
-  .main{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255);
-    border-bottom: #ffa500 solid;
-  }
-  h2{
-    color: #ffa500;
-  }
-  .nav1,.nav2{
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .nav1{
-    width: 300px;
-    margin-left: 30px;
-  }
-  .nav2{
-    width: 475px;
-    /*margin-right: 20px;*/
-  }
+.main {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-bottom: #ffa500 solid;
+}
+
+h2 {
+  color: #ffa500;
+}
+
+.nav1, .nav2 {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav1 {
+  width: 300px;
+  margin-left: 30px;
+}
+
+.nav2 {
+  width: 475px;
+  /*margin-right: 20px;*/
+}
 </style>

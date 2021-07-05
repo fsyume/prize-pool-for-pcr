@@ -1,13 +1,11 @@
 <template>
-<div>
+  <div>
     <h1>后台管理页面</h1>
-</div>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style scoped>

@@ -44,70 +44,74 @@
 <script>
 export default {
   // vue生命周期函数
-  beforeCreate () {
+  beforeCreate() {
     this.$alert('正在开发的页面，登录功能需要请求后台，本站点后台正在开发,作者：浮生yume ', '警告！！！', {
       confirmButtonText: '确定'
     })
-    // 添加请求拦截器
-    this.$http.interceptors.request.use(function (config) {
-      // 在发送请求之前做些什么
-      console.log('拦截器')
-      return config
-    }, function (error) {
-      // 对请求错误做些什么
-      console.log('拦截器')
-      return Promise.reject(error)
-    })
   },
-  data () {
+  data() {
     return {
       // 数据绑定
       loginForm: {
-        username: 'fsyume',
-        password: '123456'
+        username: '',
+        password: ''
       },
       // 表单验证
       loginRules: {
         username: [
-          { required: true, message: '请输入用户名', trigger: 'blur' },
-          { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
+          {required: true, message: '请输入用户名', trigger: 'blur'},
+          {min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur'}
         ],
         password: [
-          { required: true, message: '请输入密码', trigger: 'blur' },
-          { min: 3, max: 8, message: '长度在 3 到 8 个字符', trigger: 'blur' }
+          {required: true, message: '请输入密码', trigger: 'blur'},
+          {min: 3, max: 8, message: '长度在 3 到 8 个字符', trigger: 'blur'}
         ]
       }
     }
   },
   methods: {
     // 登录
-    userLogin () {
-      this.$http.post('/api/userLogin.php', this.loginForm).then((res) => {
-        console.log(res.data[0])
-        if (res.data[0].static == true) {
+    userLogin() {
+
+      this.loginForm.password = this.md5(this.loginForm.password)
+
+      console.log(this.loginForm.password)
+
+      this.$http.post('/login', this.loginForm).then((res) => {
+
+        console.log(res.data)
+
+        if (res.data.static == true) {
           console.log('登录成功')
+
           // 在sessionStorage储存jwt
-          // sessionStorage.setItem('jwt', res.data.token)
-          sessionStorage.setItem('uid', res.data[0].usermsg[0].uid)
-          console.log(sessionStorage.getItem('uid'))
+          sessionStorage.setItem('jwt', res.data.token)
+          console.log(sessionStorage.getItem('jwt'))
+
           // 成功登录弹窗
           this.$message.success('登录成功！欢迎~~')
+
           // 登录成功后跳转页面
           this.$router.push('/workbench')
+
         } else {
+
           console.log('登录失败')
+
           // 登录失败弹窗
           this.$message.error('登录失败，请检查用户名和密码')
         }
       })
     },
+
     // 普通用户注册
-    register () {
+    register() {
       // 跳转到登录页面
       this.$router.push('/register')
     },
+
     // 重置
-    clearForm (formName) {
+    clearForm(formName) {
       this.$refs[formName].resetFields()
     }
   }
@@ -115,40 +119,40 @@ export default {
 </script>
 
 <style scoped>
-  #mainBox {
-    height: 100%;
-    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
-    /* background-image: url(../assets/img/bg.jpg); */
-    display: flex;
-    justify-content: flex-end;
-  }
+#mainBox {
+  height: 100%;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  /* background-image: url(../assets/img/bg.jpg); */
+  display: flex;
+  justify-content: flex-end;
+}
 
-  #loginBox {
-    width: 450px;
-    height: 100%;
-    background-color: white;
-    /* background-color: rgba(255, 255, 255, 60%); */
-    /*border-radius: 10px;*/
-    /*transform: translateY(30%);*/
-    justify-content: center;
-  }
+#loginBox {
+  width: 450px;
+  height: 100%;
+  background-color: white;
+  /* background-color: rgba(255, 255, 255, 60%); */
+  /*border-radius: 10px;*/
+  /*transform: translateY(30%);*/
+  justify-content: center;
+}
 
-  .loginFrom {
-    margin: 0 auto;
-    position: relative;
-    top: 45%;
-    right: 8%;
-  }
+.loginFrom {
+  margin: 0 auto;
+  position: relative;
+  top: 45%;
+  right: 8%;
+}
 
-  .loginButton {
-    text-align: center;
-  }
+.loginButton {
+  text-align: center;
+}
 
-  #loginText {
-    font-size: 30px;
-    position: relative;
-    top: 250px;
-    left: 117px;
-    color: rgb(122, 122, 122);
-  }
+#loginText {
+  font-size: 30px;
+  position: relative;
+  top: 250px;
+  left: 117px;
+  color: rgb(122, 122, 122);
+}
 </style>

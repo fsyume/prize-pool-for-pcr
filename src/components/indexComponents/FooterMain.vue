@@ -19,7 +19,7 @@ export default {
 .footermain {
   width: 100%;
   height: 50px;
-  background-color: rgba(255, 255, 255);
+  background-color: #FFFFFF;
   border-top: #ffa500 solid;
   display: flex;
   justify-content: center;

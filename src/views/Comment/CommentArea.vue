@@ -1,5 +1,5 @@
 <template>
-
+    <!--评论区-->
     <div id="mainBox">
       <TopnavComment></TopnavComment>
       <div class="block">

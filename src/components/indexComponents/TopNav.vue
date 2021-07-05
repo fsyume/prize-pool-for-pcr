@@ -2,7 +2,7 @@
   <!-- 顶部导航 -->
   <div class="main">
     <div class="nav1">
-      <img src="../../assets/img/pcrlogo.png">
+      <img src="../../assets/img/pcrlogo.png" alt="logo">
     </div>
     <div class="nav2">
       <!--设置router为true，将以index为path进行路由跳转-->
@@ -12,8 +12,8 @@
         <el-menu-item class="item1" index="/">公主连结Re:Dive</el-menu-item>
         <el-menu-item class="item1" index="/arknights" disabled>明日方舟Arknights</el-menu-item>
         <el-menu-item index="about">关于</el-menu-item>
-        <el-menu-item class="item1" index="commentarea" disabled>评论区</el-menu-item>
-        <el-menu-item index="login" disabled>登录</el-menu-item>
+        <el-menu-item class="item1" index="commentarea">评论区</el-menu-item>
+        <el-menu-item index="login">登录</el-menu-item>
       </el-menu>
     </div>
   </div>
@@ -32,7 +32,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: #FFFFFF;
   border-bottom: #ffa500 solid;
 }
 
