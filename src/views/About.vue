@@ -53,14 +53,14 @@
           >株式会社Cygames</el-link
         >
         <el-divider></el-divider>
+        <el-link type="danger" href="https://github.com/kzycn/PcrArk-draw-card"
+        >🏆本站点GitHub地址</el-link
+        >
+        &nbsp;
         <el-link type="danger" href="https://gitee.com/kzycn/PcrArk-draw-card"
-          >🏆本站点码云地址</el-link
+          >🏆本站点码云地址(国内镜像)</el-link
         >
-        &nbsp;&nbsp;
-        <el-link type="danger" href="https://gitee.com/kzycn/float"
-        >🏆本站点后端码云地址</el-link
-        >
-        &nbsp;&nbsp;
+        &nbsp;
         <el-link type="danger" href="https://www.fsyume.com/"
         >🏆浮生yume的博客</el-link
         >
