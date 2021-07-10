@@ -13,7 +13,7 @@ Vue.config.productionTip = false
 Vue.prototype.$http = VueAxios
 
 // 默认请求地址
-VueAxios.defaults.baseURL = 'http://api.husei.cn'
+VueAxios.defaults.baseURL = 'http://localhost:8091'
 
 // 自定义标签标题
 router.beforeEach((to, from, next) => {

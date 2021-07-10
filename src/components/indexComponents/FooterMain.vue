@@ -1,7 +1,7 @@
 <template>
   <!--页脚-->
   <div class="footermain">
-    <span>©2020 - 2021 By</span>
+    <span>©2020 - 2021 By </span>
     <el-link href="https://www.fsyume.com/">
       浮生yume
     </el-link>
@@ -19,7 +19,7 @@ export default {
 .footermain {
   width: 100%;
   height: 50px;
-  background-color: rgba(255, 255, 255);
+  background-color: #FFFFFF;
   border-top: #ffa500 solid;
   display: flex;
   justify-content: center;

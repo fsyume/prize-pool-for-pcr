@@ -67,31 +67,31 @@
       </div>
     </div>
     <el-card>
-     <el-table :data="tableData"
-               style="width: 100%"
-               >
-       <el-table-column
-         fixed
-         prop="date"
-         label="日期"
-       >
-       </el-table-column>
-       <el-table-column
-         prop="frequency"
-         label="次数"
-       >
-       </el-table-column>
-       <el-table-column
-         prop="gem"
-         label="花费宝石"
-       >
-       </el-table-column>
-       <el-table-column
-         prop="rmb"
-         label="花费金钱（RMB）"
-       >
-       </el-table-column>
-     </el-table>
+      <el-table :data="tableData"
+                style="width: 100%"
+      >
+        <el-table-column
+          fixed
+          prop="date"
+          label="日期"
+        >
+        </el-table-column>
+        <el-table-column
+          prop="frequency"
+          label="次数"
+        >
+        </el-table-column>
+        <el-table-column
+          prop="gem"
+          label="花费宝石"
+        >
+        </el-table-column>
+        <el-table-column
+          prop="rmb"
+          label="花费金钱（RMB）"
+        >
+        </el-table-column>
+      </el-table>
       <el-table
         :data="tableData2"
         style="width: 100%">
@@ -127,19 +127,19 @@
 <script>
 // 导入页脚组件
 import footermain from '../indexComponents/FooterMain'
-import { Record, Recruit, Refresh } from '../../../public/core/lottery'
+import {Record, Recruit, Refresh} from '../../../public/core/lottery'
 import PcrProbability from './PcrProbability'
 
 export default {
   name: 'PcrDrawCard',
-  components: { PcrProbability, footermain },
+  components: {PcrProbability, footermain},
   // vue生命周期函数
-  created () {
+  created() {
     this.$alert('正在开发的页面，其中概率调整还未实现，望周知！！！', '警告！！！', {
       confirmButtonText: '确定'
     })
   },
-  data () {
+  data() {
     return {
       urls: {
         img1: '',
@@ -173,7 +173,7 @@ export default {
     }
   },
   methods: {
-    onTenTimes () {
+    onTenTimes() {
       // 次数信息数据
       this.tableData[0].frequency = this.tableData[0].frequency + 10
       this.tableData[0].gem = this.tableData[0].gem + 1500
@@ -199,7 +199,7 @@ export default {
       // this.urls.img1 = a.threestar[0].url
     },
     // 重置按钮
-    onClean () {
+    onClean() {
       this.tableData[0].frequency = 0
       this.tableData[0].gem = 0
       this.tableData[0].rmb = 0
@@ -211,7 +211,7 @@ export default {
       Refresh()
     },
     // 出货率百分比方法
-    percentage () {
+    percentage() {
       var a = Record.three / this.tableData[0].frequency
       var str = Number(a * 100).toFixed(1)
       str += '%'
@@ -222,64 +222,64 @@ export default {
 </script>
 
 <style scoped>
-  .dcbox {
-    width: 980px;
-    height: 540px;
-    margin: 20px auto;
-    padding-top: 20px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: #ffa500 solid;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.dcbox {
+  width: 980px;
+  height: 540px;
+  margin: 20px auto;
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: #ffa500 solid;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .PDCmainbox {
-    width: 890px;
-    height: 455px;
-    background-image: url("../../assets/img/pcrgachabg.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.PDCmainbox {
+  width: 890px;
+  height: 455px;
+  background-image: url("../../assets/img/pcrgachabg.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .msgbutton {
-    width: 890px;
-    padding-top: 15px;
-    display: flex;
-    justify-content: flex-end;
-  }
+.msgbutton {
+  width: 890px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
 
-  .cards {
-    width: 710px;
-    height: 340px;
-    background-color: rgba(255, 255, 255, 0.5);
-    display: grid;
-    grid-template-columns: 130px 130px 130px 130px 130px;
-    grid-template-rows: 130px 130px;
-    grid-gap: 6px;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-  }
+.cards {
+  width: 710px;
+  height: 340px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: grid;
+  grid-template-columns: 130px 130px 130px 130px 130px;
+  grid-template-rows: 130px 130px;
+  grid-gap: 6px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
 
-  .transition-box {
-    margin-bottom: 10px;
-    width: 85px;
-    height: 85px;
-    border-radius: 4px;
-    background-color: #409EFF;
-    text-align: center;
-    color: #fff;
-    box-sizing: border-box;
-  }
+.transition-box {
+  margin-bottom: 10px;
+  width: 85px;
+  height: 85px;
+  border-radius: 4px;
+  background-color: #409EFF;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
 
-  .el-card{
-    margin: 0 auto;
-    margin-bottom: 20px;
-    width: 980px;
-    height: 300px;
-  }
+.el-card {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 980px;
+  height: 300px;
+}
 </style>
