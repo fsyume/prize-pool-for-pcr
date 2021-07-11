@@ -22,7 +22,7 @@ server
     listen 80; #监听端口
     server_name dc.fsyume.com; #站点域名
     index index.php index.html index.htm default.php default.htm default.html;# 首页设置
-    root /www/wwwroot/pcrark.husei.cn; #根目录
+    root /www/wwwroot/dc.fsyume.com; #根目录
     
     location / {
             try_files $uri $uri/ @router;
