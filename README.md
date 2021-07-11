@@ -20,7 +20,7 @@ Nginx需配置如下
 server
 {
     listen 80; #监听端口
-    server_name pcrark.husei.cn; #站点域名
+    server_name dc.fsyume.com; #站点域名
     index index.php index.html index.htm default.php default.htm default.html;# 首页设置
     root /www/wwwroot/pcrark.husei.cn; #根目录
     
