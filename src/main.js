@@ -6,14 +6,17 @@ import './plugins/element.js'
 import './assets/css/style.css'
 import store from './store'
 import '@/utils/permission'
+import * as echarts from 'echarts';
+
+Vue.prototype.$echarts = echarts
 
 Vue.config.productionTip = false
 
 // Vue.use(VueAxios)
 Vue.prototype.$http = VueAxios
 
-// 默认请求地址
-VueAxios.defaults.baseURL = 'http://localhost:8091'
+// 默认请求地址，这里设置了代理用于解决跨域问题
+VueAxios.defaults.baseURL = '/api'
 
 // 自定义标签标题
 router.beforeEach((to, from, next) => {
