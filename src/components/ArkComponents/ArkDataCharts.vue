@@ -16,12 +16,12 @@
 <script>
 export default {
   name: "ArkDataCharts",
-  data(){
-    return{
-      userInfo:{
+  data() {
+    return {
+      userInfo: {
         token: ""
       },
-      arkData:{
+      arkData: {
         _six: 0,
         _five: 0,
         _four: 0,
@@ -31,8 +31,8 @@ export default {
     }
   },
   methods: {
-    inquiry(){
-      this.$http.post("https://ark.fsyume.com:9966/arkdata",this.userInfo).then((res) =>{
+    inquiry() {
+      this.$http.post("https://ark.fsyume.com:9966/arkdata", this.userInfo).then((res) => {
 
           var fineData = res.data.data;
           console.log(res.data);
