@@ -25,7 +25,7 @@
           您的用户令牌（token）：{{loginForm.token}}
           <br/>
           <span style="color: #ff0000">请注意不要过度重复获取令牌，由于未知原因会出现bug，
-            一个用户令牌目前没有测试多长时间过期，但是实际测试可以用好几天
+            一个用户令牌目前没有测试多长时间过期，但是实际测试可以用好几天，请保存好您的用户令牌，提示过期后再次申请
           <h4>由于请求需要间隔0.5s才能再请求(防止服务器封禁)，需要等待几秒才能出结果（5秒内不出结果请按F12调出控制台查看详情）</h4>
           </span>
         </el-form-item>
@@ -68,13 +68,13 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           // 给后台发送post登录请求
-          this.$http.post("user/auth/v1/token_by_phone_password", this.loginForm).then((res) => {
+          this.$http.post("https://ark.fsyume.com:9966/usertoken", this.loginForm).then((res) => {
             console.log(res.data);
-            this.loginForm.token = res.data.data.token;
+            this.loginForm.token = res.data.token;
             console.log(this.loginForm.token)
-            if (res.data.status == 0) {
+            if (res.data.static) {
               // 在sessionStorage储存用户信息
-              sessionStorage.setItem("token",res.data.data.token)
+              sessionStorage.setItem("token",res.data.token)
               this.$message.success("登录成功");
             } else {
               this.$message.error("登录失败，请检查用户名和密码");
