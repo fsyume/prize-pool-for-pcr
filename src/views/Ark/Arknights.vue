@@ -1,38 +1,50 @@
 <template>
   <!-- 明日方舟页面 -->
   <div>
-    <h1>Arknights寻访分析</h1>
-    <div class="loginFrom">
-      <el-form
-        ref="loginForm"
-        :model="loginForm"
-        :rules="rules"
-        label-width="70px"
-        size="medium"
-      >
-        <el-form-item label="手机号" prop="phone">
-          <el-input v-model="loginForm.phone"></el-input>
-        </el-form-item>
+    <h2>明日方舟Arknights寻访分析</h2>
+    <div class="main-box">
+      <el-card>
+        <el-form
+          ref="loginForm"
+          :model="loginForm"
+          :rules="rules"
+          label-width="70px"
+          size="medium"
+        >
+          <el-form-item label="手机号" prop="phone">
+            <el-input v-model="loginForm.phone"></el-input>
+          </el-form-item>
 
-        <el-form-item label="密码" prop="password">
-          <el-input v-model="loginForm.password" type="password" show-password></el-input>
-        </el-form-item>
+          <el-form-item label="密码" prop="password">
+            <el-input v-model="loginForm.password" type="password" show-password></el-input>
+          </el-form-item>
 
-        <el-form-item>
-          <el-button type="primary" @click="submitForm('loginForm')">登录</el-button>
-          <el-button @click="resetForm('loginForm')">重置</el-button>
-          <br/>
-          您的用户令牌（token）：{{loginForm.token}}
-          <br/>
-          <span style="color: #ff0000">请注意不要过度重复获取令牌，由于未知原因会出现bug，
+          <el-form-item>
+            <el-button type="primary" @click="submitForm('loginForm')">登录</el-button>
+            <el-button @click="resetForm('loginForm')">重置</el-button>
+            <br/>
+            您的用户令牌（token）：{{ loginForm.token }}
+            <br/>
+            <span style="color: #ff0000">请注意不要过度重复获取令牌，由于未知原因会出现bug，
             一个用户令牌目前没有测试多长时间过期，但是实际测试可以用好几天，请保存好您的用户令牌，提示过期后再次申请
           <h4>由于请求需要间隔0.5s才能再请求(防止服务器封禁)，需要等待几秒才能出结果（5秒内不出结果请按F12调出控制台查看详情）</h4>
           </span>
-        </el-form-item>
-      </el-form>
+          </el-form-item>
+
+        </el-form>
+      </el-card>
     </div>
-    <ArkDataCharts></ArkDataCharts>
+
+    <div class="main-box">
+      <el-card>
+        <ArkDataCharts class="findByToken"></ArkDataCharts>
+      </el-card>
+      <el-card class="card2">
+        ©2020 - 2021 By 浮生yume
+      </el-card>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -40,7 +52,7 @@ import ArkDataCharts from "@/components/ArkComponents/ArkDataCharts";
 
 export default {
   name: "arknights",
-  components: { ArkDataCharts },
+  components: {ArkDataCharts},
   data() {
     return {
       loginForm: {
@@ -74,7 +86,7 @@ export default {
             console.log(this.loginForm.token)
             if (res.data.static) {
               // 在sessionStorage储存用户信息
-              sessionStorage.setItem("token",res.data.token)
+              sessionStorage.setItem("token", res.data.token)
               this.$message.success("登录成功");
             } else {
               this.$message.error("登录失败，请检查用户名和密码");
@@ -90,7 +102,20 @@ export default {
 </script>
 
 <style scoped>
-.loginFrom {
-  width: 500px;
+h2{
+  margin-top: 25px;
+  margin-left: 30px;
+}
+.findByToken {
+  margin-top: 10px;
+}
+
+.main-box {
+  padding-bottom: 10px;
+  margin: 30px;
+}
+
+.card2{
+  margin-top: 10px;
 }
 </style>

@@ -16,11 +16,10 @@ Vue.config.productionTip = false
 // Vue.use(VueAxios)
 Vue.prototype.$http = VueAxios
 
-// 默认请求地址，这里设置了代理用于解决跨域问题
-VueAxios.defaults.baseURL = '/a'
+VueAxios.defaults.baseURL = 'https://ark.fsyume.com:9966'
 
-// 登录请求预处理（Cookie）
-// VueAxios.defaults.withCredentials = true
+// // 默认请求地址，这里设置了代理用于解决跨域问题
+// VueAxios.defaults.baseURL = '/a'
 
 // 自定义标签标题
 router.beforeEach((to, from, next) => {
