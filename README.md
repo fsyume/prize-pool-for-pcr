@@ -1,9 +1,9 @@
-# PcrArk-draw-card
+# PcrArk-Draw-Card
 
 > [国内镜像Gitee](https://gitee.com/kzycn/PcrArk-draw-card)，[GitHub](https://github.com/kzycn/PcrArk-draw-card)
 
 #### 介绍
-公主连结Re:Dive&明日方舟Arknights奖池页面
+公主连结Re:Dive&明日方舟Arknights公开寻访数据分析页面
 
 #### 软件架构
 vue.js
