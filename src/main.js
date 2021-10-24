@@ -6,10 +6,10 @@ import './plugins/element.js'
 import './assets/css/style.css'
 import store from './store'
 import '@/utils/permission'
-import * as echarts from 'echarts';
-
-
-Vue.prototype.$echarts = echarts
+// import * as echarts from 'echarts';
+//
+//
+// Vue.prototype.$echarts = echarts
 
 Vue.config.productionTip = false
 

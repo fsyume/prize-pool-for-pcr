@@ -9,9 +9,10 @@
       <el-menu mode="horizontal" :unique-opened="true" background-color="#ffffff" active-text-color="#ffa500"
                :router="true">
         <!--<el-menu-item index="/">首页</el-menu-item>-->
-        <el-menu-item class="item1" index="/">公主连结Re:Dive</el-menu-item>
-        <el-menu-item class="item1" index="/arknights">明日方舟Arknights</el-menu-item>
+        <!--<el-menu-item class="item1" index="/">公主连结Re:Dive</el-menu-item>-->
+        <!--<el-menu-item class="item1" index="/arknights">明日方舟Arknights</el-menu-item>-->
         <el-menu-item index="about">关于</el-menu-item>
+
       </el-menu>
     </div>
   </div>
@@ -55,7 +56,7 @@ h2 {
 }
 
 .nav2 {
-  width: 370px;
+  width: 70px;
   /*margin-right: 20px;*/
 }
 </style>

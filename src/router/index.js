@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import pcr from '../views/Pcr/Pcr'
-import Arknights from '../views/Ark/Arknights'
 import about from '../views/About'
 import PcrDrawCard from '../components/PcrComponents/PcrDrawCard'
 import notfound from '../views/NotFound'
@@ -17,21 +16,10 @@ const routes = [
     component: pcr,
     meta: { title: '公主连结蛋池模拟' },
     children: [
-      // { path: '/', component: index, meta: { title: '公主连结蛋池模拟' } },
       { path: '/', component: PcrDrawCard, meta: { title: '公主连结蛋池模拟' } },
       { path: 'about', component: about, meta: { title: '关于|公主连结蛋池模拟' } }
     ]
   },
-
-  // 明日方舟蛋池模拟
-  {
-    path: '/arknights',
-    component: Arknights,
-    meta: {
-      title: '明日方舟蛋池模拟'
-    }
-  },
-
   // 404路由
   {
     path: '*',

@@ -1,5 +1,5 @@
 {
-  "name": "PcrArk-draw-card",
+  "name": "PCR-Draw-Card",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,6 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "echarts": "^5.2.0",
     "element-ui": "^2.4.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
